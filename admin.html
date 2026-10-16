@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard • Elección de Bachillerato 2027</title>
+  
+  <!-- Apple Meta Tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#000000">
+
+  <!-- Google Fonts: Inter & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Text"', '"SF Pro Display"', '"Inter"', 'sans-serif'],
+            display: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            apple: {
+              black: '#000000',
+              dark: '#0a0a0c',
+              card: '#121215',
+              cardElevated: '#1a1a1f',
+              border: 'rgba(255, 255, 255, 0.08)',
+              blue: '#2997ff',
+              green: '#30d158',
+              yellow: '#ffd60a',
+              orange: '#ff9f0a',
+              purple: '#bf5af2',
+              grayText: '#86868b',
+              lightGray: '#f5f5f7',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #000000;
+      color: #f5f5f7;
+      letter-spacing: -0.015em;
+      -webkit-font-smoothing: antialiased;
+    }
+    .apple-glass {
+      background: rgba(18, 18, 22, 0.75);
+      backdrop-filter: blur(32px) saturate(180%);
+      -webkit-backdrop-filter: blur(32px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .apple-glass-card {
+      background: rgba(22, 22, 28, 0.65);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 9999px;
+    }
+    @keyframes pulseGreen {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.15); opacity: 0.6; }
+    }
+    .pulse-dot {
+      animation: pulseGreen 2s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body class="selection:bg-apple-blue selection:text-white min-h-screen">
+
+  <!-- ==================== PANTALLA DE ACCESO PROTEGIDO (PIN / LOGIN) ==================== -->
+  <div id="pantallaLogin" class="fixed inset-0 z-50 bg-black flex items-center justify-center p-4">
+    <!-- Luces de fondo -->
+    <div class="absolute w-96 h-96 bg-blue-600/15 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="apple-glass rounded-3xl p-8 sm:p-10 max-w-sm w-full border border-white/[0.12] text-center shadow-2xl relative z-10 space-y-6">
+      <div class="w-16 h-16 rounded-2xl bg-white/[0.08] border border-white/[0.15] text-white flex items-center justify-center text-2xl mx-auto shadow-lg shadow-black/50">
+        <i class="fa-solid fa-lock text-apple-blue"></i>
+      </div>
+
+      <div>
+        <span class="text-[10px] font-bold uppercase tracking-widest text-apple-grayText">Área Restringida</span>
+        <h2 class="text-xl font-bold text-white mt-1">Panel de Coordinación</h2>
+        <p class="text-xs text-apple-grayText mt-1">Ingresa la clave de administrador para acceder a las estadísticas oficiales.</p>
+      </div>
+
+      <form id="formAcceso" onsubmit="validarClaveAdmin(event)" class="space-y-4">
+        <div>
+          <input type="password" id="inputClave" placeholder="Ingresa la clave..." autofocus
+                 class="w-full text-center tracking-widest text-lg font-mono py-3 px-4 rounded-2xl bg-white/[0.04] border border-white/[0.12] text-white focus:outline-none focus:border-apple-blue transition">
+          <p id="errorClave" class="text-rose-400 text-xs mt-2 hidden">
+            <i class="fa-solid fa-circle-exclamation mr-1"></i> Clave incorrecta
+          </p>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-2xl bg-apple-blue hover:bg-blue-600 text-white font-semibold text-xs sm:text-sm shadow-lg shadow-blue-600/30 transition active:scale-[0.98]">
+          Desbloquear Panel
+        </button>
+      </form>
+
+      <div class="pt-2 text-[11px] text-zinc-500">
+        <a href="index.html" class="hover:text-white transition flex items-center justify-center gap-1.5">
+          <i class="fa-solid fa-arrow-left text-[10px]"></i>
+          <span>Volver al formulario para alumnos</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==================== DASHBOARD ADMINISTRATIVO ==================== -->
+  <div id="panelDashboard" class="hidden min-h-screen flex flex-col">
+    
+    <!-- Navbar Admin -->
+    <header class="sticky top-0 z-40 apple-glass border-b border-white/[0.08]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        
+        <div class="flex items-center space-x-3">
+          <div class="w-9 h-9 rounded-xl bg-white/[0.08] border border-white/[0.12] flex items-center justify-center text-apple-yellow">
+            <i class="fa-solid fa-chart-pie text-sm"></i>
+          </div>
+          <div>
+            <div class="flex items-center space-x-2">
+              <span class="text-xs font-bold text-white">Colegio San José • AD ASTRA</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-apple-blue/15 text-apple-blue font-semibold">Admin</span>
+            </div>
+            <div class="text-[11px] text-apple-grayText flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-apple-green pulse-dot"></span>
+              <span id="labelFirestoreStatus">Firestore Conectado en Tiempo Real</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-3 text-xs">
+          <a href="index.html" target="_blank" class="hidden sm:flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-white/[0.06] hover:bg-white/[0.12] text-apple-lightGray border border-white/[0.08] transition">
+            <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+            <span>Ver Sitio Público</span>
+          </a>
+          <button onclick="cerrarSesionAdmin()" class="px-3 py-1.5 rounded-xl bg-white/[0.06] hover:bg-rose-500/20 text-zinc-400 hover:text-rose-300 border border-white/[0.08] transition flex items-center space-x-1.5">
+            <i class="fa-solid fa-arrow-right-from-bracket text-[11px]"></i>
+            <span>Salir</span>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+      
+      <!-- Título de Sección -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h1 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Estadísticas de Elección 2027</h1>
+          <p class="text-apple-grayText text-xs sm:text-sm mt-1">
+            Resultados en vivo del proceso vocacional de los alumnos de 9° Grado.
+          </p>
+        </div>
+        <div class="flex items-center space-x-3">
+          <button onclick="exportarExcel()" class="px-4 py-2 rounded-2xl bg-apple-green/20 hover:bg-apple-green/30 text-apple-green font-semibold text-xs border border-apple-green/30 transition flex items-center space-x-2">
+            <i class="fa-solid fa-file-excel"></i>
+            <span>Descargar Lista en Excel (CSV)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- TARJETAS KPI (RESUMEN EN CIFRAS) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <!-- Total General -->
+        <div class="apple-glass-card rounded-3xl p-6">
+          <div class="flex items-center justify-between text-apple-grayText text-xs font-semibold uppercase tracking-wider">
+            <span>Total Inscritos</span>
+            <div class="w-8 h-8 rounded-xl bg-white/[0.06] text-white flex items-center justify-center">
+              <i class="fa-solid fa-users text-xs"></i>
+            </div>
+          </div>
+          <div id="statTotal" class="text-3xl sm:text-4xl font-extrabold text-white mt-3 tracking-tight">0</div>
+          <div class="text-[11px] text-zinc-400 mt-1">Alumnos de 9° Grado</div>
+        </div>
+
+        <!-- Técnico en Diseño -->
+        <div class="apple-glass-card rounded-3xl p-6">
+          <div class="flex items-center justify-between text-apple-green text-xs font-semibold uppercase tracking-wider">
+            <span>Técnico en Diseño</span>
+            <div class="w-8 h-8 rounded-xl bg-emerald-500/15 text-apple-green flex items-center justify-center">
+              <i class="fa-solid fa-palette text-xs"></i>
+            </div>
+          </div>
+          <div id="statTecnico" class="text-3xl sm:text-4xl font-extrabold text-apple-green mt-3 tracking-tight">0</div>
+          <div id="statTecnicoPorc" class="text-[11px] text-zinc-400 mt-1">0% del total</div>
+        </div>
+
+        <!-- Bachillerato General -->
+        <div class="apple-glass-card rounded-3xl p-6">
+          <div class="flex items-center justify-between text-apple-blue text-xs font-semibold uppercase tracking-wider">
+            <span>Bach. General</span>
+            <div class="w-8 h-8 rounded-xl bg-blue-500/15 text-apple-blue flex items-center justify-center">
+              <i class="fa-solid fa-book-bookmark text-xs"></i>
+            </div>
+          </div>
+          <div id="statGeneral" class="text-3xl sm:text-4xl font-extrabold text-apple-blue mt-3 tracking-tight">0</div>
+          <div id="statGeneralPorc" class="text-[11px] text-zinc-400 mt-1">0% del total</div>
+        </div>
+
+        <!-- Sección más demandada -->
+        <div class="apple-glass-card rounded-3xl p-6">
+          <div class="flex items-center justify-between text-apple-yellow text-xs font-semibold uppercase tracking-wider">
+            <span>Mayor Participación</span>
+            <div class="w-8 h-8 rounded-xl bg-amber-500/15 text-apple-yellow flex items-center justify-center">
+              <i class="fa-solid fa-award text-xs"></i>
+            </div>
+          </div>
+          <div id="statMayorSeccion" class="text-2xl sm:text-3xl font-extrabold text-white mt-3 tracking-tight">-</div>
+          <div id="statMayorSeccionDetalle" class="text-[11px] text-zinc-400 mt-1">Esperando registros...</div>
+        </div>
+
+      </div>
+
+      <!-- BARRAS GRÁFICAS DE DISTRIBUCIÓN ESTILO APPLE -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- Distribución de Modalidades -->
+        <div class="apple-glass-card rounded-3xl p-6 sm:p-7 space-y-4">
+          <div class="flex items-center justify-between border-b border-white/[0.06] pb-3">
+            <h3 class="text-sm font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-chart-column text-apple-blue"></i>
+              <span>Distribución por Modalidad</span>
+            </h3>
+            <span class="text-[11px] text-apple-grayText">Preferencias 2027</span>
+          </div>
+
+          <div class="space-y-4 pt-2 text-xs">
+            <!-- Técnico Vocacional -->
+            <div>
+              <div class="flex items-center justify-between font-semibold mb-1.5">
+                <span class="text-white flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-apple-green"></span>
+                  Técnico Vocacional en Diseño Gráfico (3 Años)
+                </span>
+                <span id="labelBarTecnico" class="text-apple-green">0 (0%)</span>
+              </div>
+              <div class="w-full h-3 rounded-full bg-white/[0.06] overflow-hidden">
+                <div id="barTecnico" class="h-full bg-gradient-to-r from-emerald-500 to-apple-green rounded-full transition-all duration-700" style="width: 0%"></div>
+              </div>
+            </div>
+
+            <!-- Bachillerato General -->
+            <div>
+              <div class="flex items-center justify-between font-semibold mb-1.5">
+                <span class="text-white flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-apple-blue"></span>
+                  Bachillerato General (2 Años)
+                </span>
+                <span id="labelBarGeneral" class="text-apple-blue">0 (0%)</span>
+              </div>
+              <div class="w-full h-3 rounded-full bg-white/[0.06] overflow-hidden">
+                <div id="barGeneral" class="h-full bg-gradient-to-r from-blue-600 to-apple-blue rounded-full transition-all duration-700" style="width: 0%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Distribución por Sección de 9° Grado -->
+        <div class="apple-glass-card rounded-3xl p-6 sm:p-7 space-y-4">
+          <div class="flex items-center justify-between border-b border-white/[0.06] pb-3">
+            <h3 class="text-sm font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-layer-group text-apple-yellow"></i>
+              <span>Participación por Sección de 9° Grado</span>
+            </h3>
+            <span class="text-[11px] text-apple-grayText">Secciones A, B y C</span>
+          </div>
+
+          <div class="space-y-3 pt-2 text-xs">
+            <div>
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-semibold text-white">9° Grado Sección "A"</span>
+                <span id="labelSeccionA" class="text-apple-grayText">0 alumnos</span>
+              </div>
+              <div class="w-full h-2.5 rounded-full bg-white/[0.06] overflow-hidden">
+                <div id="barSeccionA" class="h-full bg-apple-blue rounded-full transition-all duration-700" style="width: 0%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-semibold text-white">9° Grado Sección "B"</span>
+                <span id="labelSeccionB" class="text-apple-grayText">0 alumnos</span>
+              </div>
+              <div class="w-full h-2.5 rounded-full bg-white/[0.06] overflow-hidden">
+                <div id="barSeccionB" class="h-full bg-apple-purple rounded-full transition-all duration-700" style="width: 0%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-semibold text-white">9° Grado Sección "C"</span>
+                <span id="labelSeccionC" class="text-apple-grayText">0 alumnos</span>
+              </div>
+              <div class="w-full h-2.5 rounded-full bg-white/[0.06] overflow-hidden">
+                <div id="barSeccionC" class="h-full bg-apple-yellow rounded-full transition-all duration-700" style="width: 0%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TABLA DETALLADA DE ESTUDIANTES -->
+      <div class="apple-glass-card rounded-3xl p-6 sm:p-8 space-y-5">
+        
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <h3 class="text-lg font-bold text-white">Nómina Oficial de Estudiantes</h3>
+            <p class="text-xs text-apple-grayText">Registros sincronizados con Google Firebase Firestore</p>
+          </div>
+
+          <!-- Filtros de búsqueda -->
+          <div class="flex flex-wrap items-center gap-2">
+            <div class="relative">
+              <input type="text" id="inputBuscar" oninput="filtrarTabla()" placeholder="Buscar alumno por nombre o teléfono..."
+                     class="w-56 pl-9 pr-3 py-2 rounded-xl bg-white/[0.04] border border-white/[0.1] text-xs text-white focus:outline-none focus:border-apple-blue transition">
+              <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-zinc-500 text-xs"></i>
+            </div>
+
+            <select id="filtroModalidad" onchange="filtrarTabla()" class="px-3 py-2 rounded-xl bg-white/[0.04] border border-white/[0.1] text-xs text-white focus:outline-none focus:border-apple-blue">
+              <option value="todos" class="bg-neutral-900">Todas las Modalidades</option>
+              <option value="Técnico" class="bg-neutral-900">Técnico en Diseño</option>
+              <option value="General" class="bg-neutral-900">Bachillerato General</option>
+            </select>
+
+            <select id="filtroSeccion" onchange="filtrarTabla()" class="px-3 py-2 rounded-xl bg-white/[0.04] border border-white/[0.1] text-xs text-white focus:outline-none focus:border-apple-blue">
+              <option value="todas" class="bg-neutral-900">Todas las Secciones</option>
+              <option value="Sección A" class="bg-neutral-900">Sección A</option>
+              <option value="Sección B" class="bg-neutral-900">Sección B</option>
+              <option value="Sección C" class="bg-neutral-900">Sección C</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Tabla -->
+        <div class="overflow-x-auto rounded-2xl border border-white/[0.08]">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-white/[0.04] text-apple-grayText uppercase font-semibold text-[10px] tracking-wider border-b border-white/[0.08]">
+              <tr>
+                <th class="py-3.5 px-4 w-12 text-center">#</th>
+                <th class="py-3.5 px-4">Estudiante</th>
+                <th class="py-3.5 px-4">Sección</th>
+                <th class="py-3.5 px-4">Modalidad</th>
+                <th class="py-3.5 px-4">Contacto</th>
+                <th class="py-3.5 px-4">Fecha</th>
+                <th class="py-3.5 px-4 text-center">Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="cuerpoTabla" class="divide-y divide-white/[0.06] text-slate-300">
+              <tr>
+                <td colspan="7" class="py-12 text-center text-apple-grayText text-xs">
+                  <i class="fa-solid fa-spinner fa-spin text-xl mb-2 block text-apple-blue"></i>
+                  Cargando inscripciones desde Firebase...
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="flex items-center justify-between text-xs text-apple-grayText pt-2">
+          <span id="contadorResultados">Mostrando 0 inscripciones</span>
+          <span class="text-[11px] text-zinc-600">Colegio San José • Panel Oficial</span>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+
+  <!-- ==================== MODAL DETALLE DE ESTUDIANTE ==================== -->
+  <div id="modalDetalle" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="apple-glass rounded-3xl p-6 sm:p-8 max-w-md w-full border border-white/[0.15] space-y-4">
+      <div class="flex items-center justify-between pb-3 border-b border-white/[0.08]">
+        <h4 class="text-sm font-bold text-white flex items-center gap-2">
+          <i class="fa-solid fa-user-graduate text-apple-blue"></i>
+          <span>Ficha de Inscripción</span>
+        </h4>
+        <button onclick="cerrarModalDetalle()" class="text-zinc-400 hover:text-white">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div id="contenidoDetalle" class="space-y-3 text-xs">
+        <!-- Rellenado dinámico -->
+      </div>
+
+      <div class="pt-3 border-t border-white/[0.08] flex justify-end">
+        <button onclick="cerrarModalDetalle()" class="px-5 py-2 rounded-xl bg-white/[0.08] hover:bg-white/[0.15] text-white text-xs font-semibold">
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==================== SCRIPT FIREBASE Y LÓGICA DASHBOARD ==================== -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { 
+      getFirestore, 
+      collection, 
+      onSnapshot,
+      query,
+      orderBy
+    } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+    const CLAVE_MAESTRA = "csj2027"; // Clave de acceso al panel
+    const FIREBASE_CONFIG = {
+      apiKey: "AIzaSyCqkMRviBb5rMd4YucN2FLghQ4A3OQXVO4",
+      authDomain: "bachtec-9190c.firebaseapp.com",
+      projectId: "bachtec-9190c",
+      storageBucket: "bachtec-9190c.firebasestorage.app",
+      messagingSenderId: "1005686162690",
+      appId: "1:1005686162690:web:aeb78e8c559620906b2e1b",
+      measurementId: "G-XEBG4SCX03"
+    };
+
+    let registros = [];
+    let db = null;
+
+    // Control de autenticación
+    window.validarClaveAdmin = function(e) {
+      e.preventDefault();
+      const clave = document.getElementById('inputClave').value.trim();
+      if (clave === CLAVE_MAESTRA || clave === "admin2027") {
+        sessionStorage.setItem('csj_admin_auth', 'true');
+        mostrarDashboard();
+      } else {
+        document.getElementById('errorClave').classList.remove('hidden');
+      }
+    };
+
+    window.cerrarSesionAdmin = function() {
+      sessionStorage.removeItem('csj_admin_auth');
+      location.reload();
+    };
+
+    function verificarSesion() {
+      if (sessionStorage.getItem('csj_admin_auth') === 'true') {
+        mostrarDashboard();
+      }
+    }
+
+    function mostrarDashboard() {
+      document.getElementById('pantallaLogin').classList.add('hidden');
+      document.getElementById('panelDashboard').classList.remove('hidden');
+      conectarFirestore();
+    }
+
+    // Conexión y escucha en tiempo real
+    function conectarFirestore() {
+      try {
+        const app = initializeApp(FIREBASE_CONFIG);
+        db = getFirestore(app);
+        const colRef = collection(db, "inscripciones_bachillerato_2027");
+
+        onSnapshot(colRef, (snapshot) => {
+          registros = [];
+          snapshot.forEach((doc) => {
+            registros.push({ id: doc.id, ...doc.data() });
+          });
+          actualizarDashboard();
+        }, (err) => {
+          console.warn("Firestore error, cargando registros locales si existen:", err);
+          cargarRegistrosLocales();
+        });
+      } catch (e) {
+        console.error("Error al inicializar Firebase en dashboard:", e);
+        cargarRegistrosLocales();
+      }
+    }
+
+    function cargarRegistrosLocales() {
+      const data = localStorage.getItem('csj_inscripciones_locales');
+      registros = data ? JSON.parse(data) : [];
+      actualizarDashboard();
+    }
+
+    // Actualizar Estadísticas y Gráficos
+    function actualizarDashboard() {
+      const total = registros.length;
+      document.getElementById('statTotal').textContent = total;
+
+      const tecnicos = registros.filter(r => (r.modalidad || '').includes('Técnico')).length;
+      const generales = registros.filter(r => (r.modalidad || '').includes('General')).length;
+
+      document.getElementById('statTecnico').textContent = tecnicos;
+      document.getElementById('statGeneral').textContent = generales;
+
+      const porcTecnico = total > 0 ? Math.round((tecnicos / total) * 100) : 0;
+      const porcGeneral = total > 0 ? Math.round((generales / total) * 100) : 0;
+
+      document.getElementById('statTecnicoPorc').textContent = `${porcTecnico}% del total`;
+      document.getElementById('statGeneralPorc').textContent = `${porcGeneral}% del total`;
+
+      document.getElementById('labelBarTecnico').textContent = `${tecnicos} (${porcTecnico}%)`;
+      document.getElementById('barTecnico').style.width = `${porcTecnico}%`;
+
+      document.getElementById('labelBarGeneral').textContent = `${generales} (${porcGeneral}%)`;
+      document.getElementById('barGeneral').style.width = `${porcGeneral}%`;
+
+      // Secciones
+      const secA = registros.filter(r => (r.seccion || '').includes('Sección A')).length;
+      const secB = registros.filter(r => (r.seccion || '').includes('Sección B')).length;
+      const secC = registros.filter(r => (r.seccion || '').includes('Sección C')).length;
+
+      const porcA = total > 0 ? Math.round((secA / total) * 100) : 0;
+      const porcB = total > 0 ? Math.round((secB / total) * 100) : 0;
+      const porcC = total > 0 ? Math.round((secC / total) * 100) : 0;
+
+      document.getElementById('labelSeccionA').textContent = `${secA} alumnos (${porcA}%)`;
+      document.getElementById('barSeccionA').style.width = `${porcA}%`;
+
+      document.getElementById('labelSeccionB').textContent = `${secB} alumnos (${porcB}%)`;
+      document.getElementById('barSeccionB').style.width = `${porcB}%`;
+
+      document.getElementById('labelSeccionC').textContent = `${secC} alumnos (${porcC}%)`;
+      document.getElementById('barSeccionC').style.width = `${porcC}%`;
+
+      // Mayor sección
+      let mayorSec = "-";
+      let mayorDet = "Sin registros";
+      const maxVal = Math.max(secA, secB, secC);
+      if (maxVal > 0) {
+        if (maxVal === secA) mayorSec = 'Sección "A"';
+        else if (maxVal === secB) mayorSec = 'Sección "B"';
+        else if (maxVal === secC) mayorSec = 'Sección "C"';
+        mayorDet = `${maxVal} alumnos inscritos`;
+      }
+      document.getElementById('statMayorSeccion').textContent = mayorSec;
+      document.getElementById('statMayorSeccionDetalle').textContent = mayorDet;
+
+      filtrarTabla();
+    }
+
+    // Renderizar y Filtrar Tabla
+    window.filtrarTabla = function() {
+      const q = (document.getElementById('inputBuscar').value || '').toLowerCase();
+      const mod = document.getElementById('filtroModalidad').value;
+      const sec = document.getElementById('filtroSeccion').value;
+
+      const filtrados = registros.filter(r => {
+        const coincideQ = !q || 
+          (r.nombreCompleto || '').toLowerCase().includes(q) ||
+          (r.telefono || '').toLowerCase().includes(q) ||
+          (r.correo || '').toLowerCase().includes(q);
+
+        const coincideMod = mod === 'todos' || (r.modalidad || '').includes(mod);
+        const coincideSec = sec === 'todas' || (r.seccion || '').includes(sec);
+
+        return coincideQ && coincideMod && coincideSec;
+      });
+
+      const cuerpo = document.getElementById('cuerpoTabla');
+      const contador = document.getElementById('contadorResultados');
+      contador.textContent = `Mostrando ${filtrados.length} de ${registros.length} inscripciones`;
+
+      if (filtrados.length === 0) {
+        cuerpo.innerHTML = `
+          <tr>
+            <td colspan="7" class="py-10 text-center text-apple-grayText text-xs">
+              No se encontraron alumnos con los filtros seleccionados.
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      cuerpo.innerHTML = filtrados.map((r, idx) => {
+        const esTecnico = (r.modalidad || '').includes('Técnico');
+        const telLimpio = (r.telefono || '').replace(/\D/g, '');
+        return `
+          <tr class="hover:bg-white/[0.02] transition">
+            <td class="py-3.5 px-4 text-center font-mono text-apple-grayText text-xs font-semibold">${idx + 1}</td>
+            <td class="py-3.5 px-4 font-semibold text-white">${r.nombreCompleto || '-'}</td>
+            <td class="py-3.5 px-4">
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-white/[0.08] text-slate-300">
+                ${r.seccion || '-'}
+              </span>
+            </td>
+            <td class="py-3.5 px-4">
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold ${esTecnico ? 'bg-emerald-500/15 text-apple-green border border-emerald-500/30' : 'bg-blue-500/15 text-apple-blue border border-blue-500/30'}">
+                ${r.modalidad || '-'}
+              </span>
+            </td>
+            <td class="py-3.5 px-4">
+              <a href="https://wa.me/503${telLimpio}" target="_blank" class="text-slate-300 hover:text-apple-green transition flex items-center gap-1 font-mono">
+                <i class="fa-brands fa-whatsapp text-apple-green"></i>
+                <span>${r.telefono || '-'}</span>
+              </a>
+            </td>
+            <td class="py-3.5 px-4 text-apple-grayText text-[11px]">${r.fechaEnvio || 'Reciente'}</td>
+            <td class="py-3.5 px-4 text-center">
+              <button onclick="verDetalle('${r.id || ''}')" class="px-2.5 py-1 rounded-lg bg-white/[0.06] hover:bg-white/[0.12] text-white text-[11px] transition">
+                Ver Ficha
+              </button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    };
+
+    window.verDetalle = function(id) {
+      const reg = registros.find(r => r.id === id);
+      if (!reg) return;
+
+      const cont = document.getElementById('contenidoDetalle');
+      cont.innerHTML = `
+        <div class="p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08] space-y-2.5">
+          <div><span class="text-zinc-500 block text-[10px] uppercase font-bold">Estudiante</span><span class="font-bold text-white text-sm">${reg.nombreCompleto}</span></div>
+          <div class="pt-1 border-t border-white/[0.06]">
+            <span class="text-zinc-500 block text-[10px]">Sección 9° Grado</span>
+            <span class="text-white font-semibold">${reg.seccion}</span>
+          </div>
+          <div class="grid grid-cols-2 gap-2 pt-1 border-t border-white/[0.06]">
+            <div><span class="text-zinc-500 block text-[10px]">Teléfono WhatsApp</span><span class="text-white">${reg.telefono}</span></div>
+            <div><span class="text-zinc-500 block text-[10px]">Correo Electrónico</span><span class="text-white">${reg.correo}</span></div>
+          </div>
+          <div class="pt-1 border-t border-white/[0.06]">
+            <span class="text-zinc-500 block text-[10px]">Modalidad Elegida</span>
+            <span class="font-bold text-apple-blue">${reg.modalidad}</span>
+            ${reg.especialidad ? `<div class="text-[11px] text-apple-green font-medium">${reg.especialidad}</div>` : ''}
+          </div>
+          ${reg.motivo ? `
+            <div class="pt-2 border-t border-white/[0.06]">
+              <span class="text-zinc-500 block text-[10px]">Motivo / Aspiración</span>
+              <p class="text-slate-300 italic bg-white/[0.02] p-2 rounded-xl mt-1">"${reg.motivo}"</p>
+            </div>
+          ` : ''}
+        </div>
+      `;
+
+      document.getElementById('modalDetalle').classList.remove('hidden');
+    };
+
+    window.cerrarModalDetalle = function() {
+      document.getElementById('modalDetalle').classList.add('hidden');
+    };
+
+    // Exportar a Excel (CSV)
+    window.exportarExcel = function() {
+      if (registros.length === 0) {
+        alert("No hay inscripciones para exportar.");
+        return;
+      }
+
+      let csv = "\uFEFF#,Estudiante,Seccion 9,Modalidad,Especialidad,Telefono,Correo,Fecha Registro,Motivo\n";
+      registros.forEach((r, idx) => {
+        csv += `"${idx + 1}","${r.nombreCompleto || ''}","${r.seccion || ''}","${r.modalidad || ''}","${r.especialidad || ''}","${r.telefono || ''}","${r.correo || ''}","${r.fechaEnvio || ''}","${(r.motivo || '').replace(/"/g, '""')}"\n`;
+      });
+
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.setAttribute("href", url);
+      link.setAttribute("download", `Inscripciones_Bachillerato_2027_${new Date().toISOString().slice(0,10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    };
+
+    verificarSesion();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1997 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colegio San José • Elección de Bachillerato 2027</title>
+
+  <!-- Apple Meta Tags & Icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#000000">
+  <meta name="description"
+    content="Proceso oficial de Orientación Vocacional y Elección de Bachillerato 2027 para 9° Grado. Colegio San José • AD ASTRA.">
+
+  <!-- Google Fonts: Inter & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Text"', '"SF Pro Display"', '"Inter"', 'sans-serif'],
+            display: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            apple: {
+              black: '#000000',
+              dark: '#0a0a0c',
+              card: '#121215',
+              cardElevated: '#1a1a1f',
+              border: 'rgba(255, 255, 255, 0.08)',
+              borderFocus: 'rgba(255, 255, 255, 0.2)',
+              blue: '#2997ff',
+              blueHover: '#147ce5',
+              green: '#30d158',
+              yellow: '#ffd60a',
+              orange: '#ff9f0a',
+              purple: '#bf5af2',
+              grayText: '#86868b',
+              lightGray: '#f5f5f7',
+            }
+          },
+          boxShadow: {
+            'apple-glass': '0 20px 40px -15px rgba(0, 0, 0, 0.7), inset 0 1px 0 0 rgba(255, 255, 255, 0.1)',
+            'apple-card': '0 12px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.06)',
+            'apple-glow': '0 0 35px -5px rgba(41, 151, 255, 0.25)',
+            'apple-glow-green': '0 0 35px -5px rgba(48, 209, 88, 0.25)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Estilos de precisión según Human Interface Guidelines (HIG) de Apple */
+    :root {
+      color-scheme: dark;
+    }
+
+    body {
+      background-color: #000000;
+      color: #f5f5f7;
+      letter-spacing: -0.015em;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Scrollbar minimalista estilo macOS */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #000000;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.18);
+      border-radius: 9999px;
+      border: 2px solid #000000;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.32);
+    }
+
+    /* Superficie de cristal frosted Apple */
+    .apple-glass {
+      background: rgba(18, 18, 22, 0.75);
+      backdrop-filter: blur(32px) saturate(180%);
+      -webkit-backdrop-filter: blur(32px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .apple-glass-card {
+      background: rgba(22, 22, 28, 0.65);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    }
+
+    .apple-glass-nav {
+      background: rgba(0, 0, 0, 0.72);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* Tipografía Apple con tracking compensado */
+    .apple-hero-title {
+      letter-spacing: -0.035em;
+      line-height: 1.05;
+    }
+
+    /* Brillo de gradiente Apple */
+    .text-gradient-apple {
+      background: linear-gradient(135deg, #ffffff 0%, #a1a1a6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .text-gradient-blue {
+      background: linear-gradient(135deg, #2997ff 0%, #bf5af2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .text-gradient-emerald {
+      background: linear-gradient(135deg, #30d158 0%, #2997ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Animación de pulso tenue para estado de base de datos */
+    @keyframes pulseSoft {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.6;
+        transform: scale(0.95);
+      }
+    }
+
+    .status-dot {
+      animation: pulseSoft 2.5s infinite ease-in-out;
+    }
+  </style>
+
+  <!-- Firebase v10 Modular SDK via ES Modules (cargado al final en script module) -->
+</head>
+
+<body class="selection:bg-apple-blue selection:text-white">
+
+  <!-- ==================== NAVBAR ESTILO APPLE ==================== -->
+  <header class="sticky top-0 z-40 apple-glass-nav transition duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+
+      <!-- Marca Institucional -->
+      <a href="#" class="flex items-center space-x-3 group">
+        <div
+          class="w-9 h-9 rounded-xl bg-white/[0.08] border border-white/[0.12] flex items-center justify-center text-white shadow-sm group-hover:border-white/30 transition">
+          <i class="fa-solid fa-graduation-cap text-apple-yellow text-sm"></i>
+        </div>
+        <div>
+          <div class="flex items-center space-x-1.5">
+            <span class="text-[10px] font-bold tracking-[0.15em] uppercase text-apple-grayText">Colegio San José</span>
+            <span class="text-[9px] px-1.5 py-0.5 rounded-full bg-apple-blue/15 text-apple-blue font-bold">2027</span>
+          </div>
+          <h1 class="text-sm font-semibold tracking-tight text-white leading-tight">Bachillerato • Ad Astra</h1>
+        </div>
+      </a>
+
+      <!-- Navegación Desktop -->
+      <nav class="hidden md:flex items-center space-x-8 text-[13px] font-medium text-apple-grayText">
+        <a href="#tecnico" class="hover:text-white transition">Técnico en Diseño</a>
+        <a href="#plan-estudios" class="hover:text-white transition">Malla Curricular</a>
+        <a href="#comparativa" class="hover:text-white transition">Comparativa</a>
+        <a href="#campo-laboral" class="hover:text-white transition">Campo Laboral</a>
+      </nav>
+
+      <!-- Botón de Acción Principal estilo Apple -->
+      <div class="flex items-center space-x-3">
+        <a href="#formulario"
+          class="inline-flex items-center justify-center px-4 py-2 rounded-full text-xs font-semibold bg-apple-blue hover:bg-apple-blueHover text-white shadow-apple-glow transition active:scale-[0.98]">
+          <span>Inscribirme (9°)</span>
+          <i class="fa-solid fa-arrow-down ml-1.5 text-[10px]"></i>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== HERO SECTION ESTILO APPLE KEYNOTE ==================== -->
+    <section class="relative pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden border-b border-white/[0.06]">
+
+      <!-- Luces ambientales de fondo estilo Apple -->
+      <div
+        class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-blue-600/15 via-purple-600/10 to-emerald-500/15 rounded-full blur-[120px] pointer-events-none">
+      </div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+
+        <!-- Pill de Novedad -->
+        <div
+          class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.1] text-xs font-medium text-apple-lightGray mb-6 backdrop-blur-md">
+          <span class="w-2 h-2 rounded-full bg-apple-blue"></span>
+          <span>Orientación Vocacional Oficial</span>
+          <span class="text-white/30">•</span>
+          <span class="text-apple-blue">Alumnos de 9° Grado</span>
+        </div>
+
+        <!-- Título Principal Keynote -->
+        <h2
+          class="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white apple-hero-title max-w-4xl mx-auto">
+          Diseña tu futuro. <br class="hidden sm:inline">
+          <span class="text-gradient-apple">Define tu camino en Bachillerato.</span>
+        </h2>
+
+        <!-- Subtítulo refinado -->
+        <p class="mt-6 text-base sm:text-lg text-apple-grayText max-w-2xl mx-auto leading-relaxed font-normal">
+          Elige entre el <strong class="text-white font-medium">Bachillerato General (2 Años)</strong> o la
+          especialización en el <strong class="text-white font-medium">Bachillerato Técnico en Diseño Gráfico (3
+            Años)</strong> con formación práctica en aula de computadoras Apple iMac.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#formulario"
+            class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-apple-blue hover:bg-apple-blueHover text-white font-semibold text-sm shadow-apple-glow transition active:scale-[0.98] flex items-center justify-center space-x-2">
+            <span>Comenzar Elección de Modalidad</span>
+            <i class="fa-solid fa-chevron-right text-xs"></i>
+          </a>
+          <a href="#tecnico"
+            class="w-full sm:w-auto px-6 py-3.5 rounded-full bg-white/[0.06] hover:bg-white/[0.1] text-apple-lightGray border border-white/[0.1] font-semibold text-sm transition active:scale-[0.98] flex items-center justify-center space-x-2">
+            <i class="fa-brands fa-apple text-sm"></i>
+            <span>Explorar Aula Apple iMac</span>
+          </a>
+        </div>
+
+        <!-- Highlights en 3 Columnas estilo Apple Specs -->
+        <div class="mt-16 pt-12 border-t border-white/[0.06] grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div>
+            <div class="text-2xl sm:text-3xl font-bold text-white tracking-tight">3 Años</div>
+            <div class="text-xs text-apple-grayText mt-1 font-medium">Plan Técnico Vocacional</div>
+          </div>
+          <div>
+            <div class="text-2xl sm:text-3xl font-bold text-gradient-emerald tracking-tight">Apple iMac</div>
+            <div class="text-xs text-apple-grayText mt-1 font-medium">Aula Creativa con macOS</div>
+          </div>
+          <div>
+            <div class="text-2xl sm:text-3xl font-bold text-gradient-blue tracking-tight">8 Módulos</div>
+            <div class="text-xs text-apple-grayText mt-1 font-medium">Por año lectivo</div>
+          </div>
+          <div>
+            <div class="text-2xl sm:text-3xl font-bold text-white tracking-tight">1 a 5</div>
+            <div class="text-xs text-apple-grayText mt-1 font-medium">Evaluación de Competencias</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Imagen Destacada del Laboratorio Apple iMac -->
+      <div class="max-w-5xl mx-auto px-4 mt-14">
+        <div class="relative rounded-3xl overflow-hidden border border-white/[0.1] shadow-2xl bg-neutral-950 group">
+          <img src="assets/imac_design_lab.jpg" alt="Laboratorio de Diseño Gráfico con Apple iMacs"
+            class="w-full h-[320px] sm:h-[450px] object-cover object-center group-hover:scale-[1.01] transition duration-700">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col justify-end p-6 sm:p-10">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-semibold w-max mb-2">
+              <i class="fa-brands fa-apple text-sm"></i>
+              <span>Entorno de Aprendizaje Pro</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold text-white">Laboratorio Especializado Apple iMac</h3>
+            <p class="text-xs sm:text-sm text-slate-300 max-w-xl mt-1 font-normal">
+              Aprende diseño vectorial, maquetación editorial, empaque, edición de foto y animación digital en pantallas
+              Retina con software profesional.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ==================== APPLE BENTO GRID: TÉCNICO EN DISEÑO ==================== -->
+    <section id="tecnico" class="py-24 border-b border-white/[0.06] relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="max-w-3xl mb-16">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-apple-green text-xs font-semibold mb-3 border border-emerald-500/20">
+            <span>Especialidad Vocacional</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-bold text-white tracking-tight apple-hero-title">
+            Bachillerato Técnico Vocacional en Diseño Gráfico.
+          </h2>
+          <p class="text-apple-grayText text-base sm:text-lg mt-3 leading-relaxed">
+            Una carrera de tres años diseñada para jóvenes con sensibilidad creativa que buscan incorporarse con ventaja
+            a la industria publicitaria, digital y editorial o ingresar con honores a la universidad.
+          </p>
+        </div>
+
+        <!-- Bento Grid estilo Apple -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <!-- Bento Card 1: Objetivo General (Span 2) -->
+          <div
+            class="md:col-span-2 apple-glass-card rounded-3xl p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden group">
+            <div class="absolute -right-16 -top-16 w-56 h-56 bg-blue-500/10 rounded-full blur-3xl pointer-events-none">
+            </div>
+            <div>
+              <div
+                class="w-12 h-12 rounded-2xl bg-white/[0.06] border border-white/[0.1] text-apple-blue flex items-center justify-center text-xl mb-6">
+                <i class="fa-solid fa-bullseye"></i>
+              </div>
+              <span class="text-xs font-semibold uppercase tracking-wider text-apple-grayText">Propósito
+                Formativo</span>
+              <h3 class="text-2xl font-bold text-white mt-1 mb-4">Soluciones Gráficas y Estrategias Creativas</h3>
+              <p class="text-apple-grayText text-sm sm:text-base leading-relaxed">
+                Formamos bachilleres con pensamiento conceptual riguroso, capaces de estructurar campañas visuales,
+                identidades de marca, comunicación publicitaria estratégica y proyectos editoriales generando impacto
+                tecnológico, social y ambiental positivo.
+              </p>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-white/[0.06] grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+              <div class="flex items-center space-x-2 text-slate-300">
+                <i class="fa-solid fa-check text-apple-green"></i>
+                <span>Campañas de Marcas</span>
+              </div>
+              <div class="flex items-center space-x-2 text-slate-300">
+                <i class="fa-solid fa-check text-apple-green"></i>
+                <span>Maquetación Digital</span>
+              </div>
+              <div class="flex items-center space-x-2 text-slate-300">
+                <i class="fa-solid fa-check text-apple-green"></i>
+                <span>Salida a Imprenta y Web</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento Card 2: Perfil de Ingreso 9° Grado -->
+          <div class="apple-glass-card rounded-3xl p-8 flex flex-col justify-between">
+            <div>
+              <div
+                class="w-12 h-12 rounded-2xl bg-white/[0.06] border border-white/[0.1] text-apple-green flex items-center justify-center text-xl mb-6">
+                <i class="fa-solid fa-user-check"></i>
+              </div>
+              <span class="text-xs font-semibold uppercase tracking-wider text-apple-grayText">Aspirantes de 9°</span>
+              <h3 class="text-xl font-bold text-white mt-1 mb-3">Perfil de Ingreso</h3>
+              <p class="text-apple-grayText text-xs sm:text-sm leading-relaxed mb-4">
+                Buscamos jóvenes entusiastas que posean:
+              </p>
+              <ul class="space-y-3 text-xs text-slate-300">
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-circle-check text-apple-green text-xs mt-0.5"></i>
+                  <span>Sensibilidad visual e inclinación por las artes y dibujo.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-circle-check text-apple-green text-xs mt-0.5"></i>
+                  <span>Curiosidad para resolver retos y proyectos reales.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-circle-check text-apple-green text-xs mt-0.5"></i>
+                  <span>Ética de trabajo en equipo y espíritu Ad Astra.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/[0.06] text-[11px] text-apple-grayText font-medium">
+              Institución: Colegio San José
+            </div>
+          </div>
+
+          <!-- Bento Card 3: Evaluación por Competencias 1 a 5 -->
+          <div class="apple-glass-card rounded-3xl p-8 flex flex-col justify-between">
+            <div>
+              <div
+                class="w-12 h-12 rounded-2xl bg-white/[0.06] border border-white/[0.1] text-apple-yellow flex items-center justify-center text-xl mb-6">
+                <i class="fa-solid fa-sliders"></i>
+              </div>
+              <span class="text-xs font-semibold uppercase tracking-wider text-apple-grayText">Estándar Técnico</span>
+              <h3 class="text-xl font-bold text-white mt-1 mb-2">Escala Numérica de 1 a 5</h3>
+              <p class="text-apple-grayText text-xs leading-relaxed mb-4">
+                A diferencia del sistema tradicional de 1 a 10, la evaluación vocacional mide el nivel de autonomía y
+                dominio técnico real:
+              </p>
+
+              <!-- Indicador visual interactivo -->
+              <div class="space-y-2">
+                <div class="flex items-center justify-between text-[11px] text-slate-400 font-medium">
+                  <span>Nivel 5: Dominio Total Autónomo</span>
+                  <span class="text-apple-green font-bold">100%</span>
+                </div>
+                <div class="w-full h-2 rounded-full bg-white/[0.06] overflow-hidden">
+                  <div class="w-full h-full bg-apple-green rounded-full"></div>
+                </div>
+
+                <div class="flex items-center justify-between text-[11px] text-slate-400 font-medium pt-1">
+                  <span>Nivel 4: Competente con Supervisión Leve</span>
+                  <span class="text-apple-blue font-bold">80%</span>
+                </div>
+                <div class="w-full h-2 rounded-full bg-white/[0.06] overflow-hidden">
+                  <div class="w-4/5 h-full bg-apple-blue rounded-full"></div>
+                </div>
+
+                <div class="flex items-center justify-between text-[11px] text-slate-400 font-medium pt-1">
+                  <span>Nivel 3: Aceptable en Proceso</span>
+                  <span class="text-apple-yellow font-bold">60%</span>
+                </div>
+                <div class="w-full h-2 rounded-full bg-white/[0.06] overflow-hidden">
+                  <div class="w-3/5 h-full bg-apple-yellow rounded-full"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-white/[0.06] text-[11px] text-apple-grayText">
+              Sin puntos decimales intermedios.
+            </div>
+          </div>
+
+          <!-- Bento Card 4: Infraestructura Tecnológica (Span 2) -->
+          <div
+            class="md:col-span-2 apple-glass-card rounded-3xl p-8 sm:p-10 flex flex-col sm:flex-row gap-6 items-center">
+            <div
+              class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 border border-white/[0.12] flex items-center justify-center shrink-0">
+              <i class="fa-brands fa-apple text-3xl sm:text-4xl text-white"></i>
+            </div>
+            <div class="flex-1">
+              <span class="text-xs font-semibold uppercase tracking-wider text-apple-blue">Equipamiento Oficial</span>
+              <h3 class="text-xl sm:text-2xl font-bold text-white mt-1">Ecosistema Apple iMac Retina</h3>
+              <p class="text-apple-grayText text-xs sm:text-sm mt-2 leading-relaxed">
+                Cada estudiante trabaja en computadoras Apple con procesadores de alto rendimiento y pantallas de
+                resolución Retina con precisión de color DCI-P3 para modelado vectorial, edición fotográfica profesional
+                y producción de marca.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== MALLA CURRICULAR CON SEGMENTED CONTROL ==================== -->
+    <section id="plan-estudios" class="py-24 border-b border-white/[0.06]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span
+            class="text-xs font-semibold tracking-wider text-apple-blue uppercase bg-apple-blue/10 px-3 py-1 rounded-full border border-apple-blue/20">
+            Malla Curricular Modular
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-4">
+            3 Años de Formación Integral
+          </h2>
+          <p class="text-apple-grayText text-sm sm:text-base mt-2">
+            Desarrollado paralelamente con las materias del Área Básica del Ministerio de Educación.
+          </p>
+        </div>
+
+        <!-- Segmented Control estilo iOS / Apple -->
+        <div class="flex justify-center mb-10">
+          <div class="inline-flex p-1 rounded-2xl bg-white/[0.06] border border-white/[0.08] backdrop-blur-xl">
+            <button type="button" onclick="cambiarAnioCurricular(1)" id="btnAnio1"
+              class="px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 bg-white text-black shadow-md">
+              Primer Año (Fundamentos)
+            </button>
+            <button type="button" onclick="cambiarAnioCurricular(2)" id="btnAnio2"
+              class="px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 text-apple-grayText hover:text-white">
+              Segundo Año (Especialización)
+            </button>
+            <button type="button" onclick="cambiarAnioCurricular(3)" id="btnAnio3"
+              class="px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 text-apple-grayText hover:text-white">
+              Tercer Año (Profesional)
+            </button>
+          </div>
+        </div>
+
+        <!-- Paneles de los Años -->
+        <div id="panelAnio1" class="apple-glass-card rounded-3xl p-8 sm:p-12 transition duration-300">
+          <div
+            class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-white/[0.06] gap-4">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-apple-blue">Fase 01 • Introducción y
+                Herramientas</span>
+              <h3 class="text-2xl font-bold text-white mt-1">Primer Año: Fundamentos Creativos</h3>
+            </div>
+            <div
+              class="flex items-center space-x-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/[0.06] border border-white/[0.1] text-slate-300 w-max">
+              <i class="fa-solid fa-clock text-apple-blue"></i>
+              <span>720 Horas Técnicas</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+            <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/[0.06] space-y-2">
+              <div
+                class="w-8 h-8 rounded-lg bg-apple-blue/15 text-apple-blue flex items-center justify-center font-bold text-xs">
+                01</div>
+              <h4 class="text-base font-bold text-white">Técnicas de Expresión Manual y Artística</h4>
+              <p class="text-xs text-apple-grayText leading-relaxed">
+                Desarrollo del trazo, teoría del color, bocetería manual, encuadre y composición visual antes del
+                entorno digital.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/[0.06] space-y-2">
+              <div
+                class="w-8 h-8 rounded-lg bg-apple-blue/15 text-apple-blue flex items-center justify-center font-bold text-xs">
+                02</div>
+              <h4 class="text-base font-bold text-white">Diseño Vectorial Digital</h4>
+              <p class="text-xs text-apple-grayText leading-relaxed">
+                Dominio de curvas Bézier, tipografía digital, logotipos e iconografía corporativa en iMac.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/[0.06] space-y-2">
+              <div
+                class="w-8 h-8 rounded-lg bg-apple-blue/15 text-apple-blue flex items-center justify-center font-bold text-xs">
+                03</div>
+              <h4 class="text-base font-bold text-white">Pensamiento Estratégico Creativo</h4>
+              <p class="text-xs text-apple-grayText leading-relaxed">
+                Metodologías de Design Thinking, lluvia de ideas y conceptualización de piezas publicitarias.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/[0.06] space-y-2">
+              <div
+                class="w-8 h-8 rounded-lg bg-apple-blue/15 text-apple-blue flex items-center justify-center font-bold text-xs">
+                04</div>
+              <h4 class="text-base font-bold text-white">Documentación Técnica en Inglés</h4>
+              <p class="text-xs text-apple-grayText leading-relaxed">
+                Comprensión de manuales de identidad, briefs creativos y vocabulario técnico global de diseño.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="panelAnio2" class="apple-glass-card rounded-3xl p-8 sm:p-12 transition duration-300 hidden">
+          <div
+            class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-white/[0.06] gap-4">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-apple-green">Fase 02 • Aplicación
+                Comercial</span>
+              <h3 class="text-2xl font-bold text-white mt-1">Segundo Año: Especialización y Empaque</h3>
+            </div>
+            <div
+              class="flex items-center space-x-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/[0.06] border border-white/[0.1] text-slate-300 w-max">
+              <i class="fa-solid fa-clock text-apple-green"></i>
+              <span>720 Horas Técnicas</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+            <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/[0.06] space-y-2">
+              <div
+                class="w-8 h-8 rounded-lg bg-apple-green/15 text-apple-green flex items-center justify-center font-bold text-xs">
+                01</div>
+              <h4 class="text-base font-bold text-white">Maquetación y Diagramación Editorial</h4>
+              <p class="text-xs text-apple-grayText leading-relaxed">
+                Diseño de revistas, libros digitales, periódicos, retículas complejas y jerarquía de texto.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/[0.06] space-y-2">
+              <div
+                class="w-8 h-8 rounded-lg bg-apple-green/15 text-apple-green flex items-center justify-center font-bold text-xs">
+                02</div>
+              <h4 class="text-base font-bold text-white">Diseño de Empaques y Troqueles</h4>
+              <p class="text-xs text-apple-grayText leading-relaxed">
+                Modelado estructural de cajas, etiquetas comerciales, viñetas y presentación tridimensional.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/[0.06] space-y-2">
+              <div
+                class="w-8 h-8 rounded-lg bg-apple-green/15 text-apple-green flex items-center justify-center font-bold text-xs">
+                03</div>
+              <h4 class="text-base font-bold text-white">Edición Digital de Imagen y Retoque</h4>
+              <p class="text-xs text-apple-grayText leading-relaxed">
+                Composiciones fotográficas complejas, máscaras, fotomontaje publicitario y calibración de color.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/[0.06] space-y-2">
+              <div
+                class="w-8 h-8 rounded-lg bg-apple-green/15 text-apple-green flex items-center justify-center font-bold text-xs">
+                04</div>
+              <h4 class="text-base font-bold text-white">Planes de Emprendimiento y Mercadeo</h4>
+              <p class="text-xs text-apple-grayText leading-relaxed">
+                Estrategia de negocios, costos de producción publicitaria y comunicación de marca para clientes.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="panelAnio3" class="apple-glass-card rounded-3xl p-8 sm:p-12 transition duration-300 hidden">
+          <div
+            class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-white/[0.06] gap-4">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-apple-yellow">Fase 03 • Salida
+                Profesional</span>
+              <h3 class="text-2xl font-bold text-white mt-1">Tercer Año: Arte Final, Audiovisual y Portafolio</h3>
+            </div>
+            <div
+              class="flex items-center space-x-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/[0.06] border border-white/[0.1] text-slate-300 w-max">
+              <i class="fa-solid fa-clock text-apple-yellow"></i>
+              <span>1,200 Horas Técnicas</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+            <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/[0.06] space-y-2">
+              <div
+                class="w-8 h-8 rounded-lg bg-apple-yellow/15 text-apple-yellow flex items-center justify-center font-bold text-xs">
+                01</div>
+              <h4 class="text-base font-bold text-white">Artes Finales para Imprenta y Gran Formato</h4>
+              <p class="text-xs text-apple-grayText leading-relaxed">
+                Separación de colores CMYK, perfiles ICC, resolución DPI, troqueles y supervisión en talleres de
+                impresión.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/[0.06] space-y-2">
+              <div
+                class="w-8 h-8 rounded-lg bg-apple-yellow/15 text-apple-yellow flex items-center justify-center font-bold text-xs">
+                02</div>
+              <h4 class="text-base font-bold text-white">Fotografía Comercial y de Producto</h4>
+              <p class="text-xs text-apple-grayText leading-relaxed">
+                Manejo de iluminación de estudio, óptica fotográfica, catalogación y dirección de arte en sesiones.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/[0.06] space-y-2">
+              <div
+                class="w-8 h-8 rounded-lg bg-apple-yellow/15 text-apple-yellow flex items-center justify-center font-bold text-xs">
+                03</div>
+              <h4 class="text-base font-bold text-white">Producción de Video y Motion Graphics</h4>
+              <p class="text-xs text-apple-grayText leading-relaxed">
+                Animación 2D publicitaria, edición audiovisual en iMac, efectos visuales y contenido para redes
+                sociales.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/[0.06] space-y-2">
+              <div
+                class="w-8 h-8 rounded-lg bg-apple-yellow/15 text-apple-yellow flex items-center justify-center font-bold text-xs">
+                04</div>
+              <h4 class="text-base font-bold text-white">Portafolio Profesional de Marca</h4>
+              <p class="text-xs text-apple-grayText leading-relaxed">
+                Construcción de portafolio web personal y defensa técnica ante terna examinadora para inserción laboral.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== TABLA COMPARATIVA ESTILO APPLE COMPARE ==================== -->
+    <section id="comparativa" class="py-24 border-b border-white/[0.06]">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center mb-16">
+          <span class="text-xs font-semibold tracking-wider text-apple-grayText uppercase">Guía de Decisión</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-2">
+            Compara las dos modalidades.
+          </h2>
+          <p class="text-apple-grayText text-sm mt-2">
+            Ambas modalidades otorgan título avalado por el MINEDUCYT para continuar la universidad.
+          </p>
+        </div>
+
+        <!-- Matriz de Comparación Apple -->
+        <div class="apple-glass-card rounded-3xl overflow-hidden border border-white/[0.08]">
+          <div
+            class="grid grid-cols-12 bg-white/[0.03] border-b border-white/[0.08] text-xs font-bold uppercase tracking-wider py-4 px-6 text-apple-grayText">
+            <div class="col-span-4 sm:col-span-4">Criterio</div>
+            <div class="col-span-4 sm:col-span-4 text-apple-lightGray">Bachillerato General</div>
+            <div class="col-span-4 sm:col-span-4 text-apple-green">Técnico en Diseño</div>
+          </div>
+
+          <div class="divide-y divide-white/[0.06] text-xs sm:text-sm">
+
+            <div class="grid grid-cols-12 py-5 px-6 items-center">
+              <div class="col-span-4 font-semibold text-white">Duración</div>
+              <div class="col-span-4 text-apple-grayText">2 Años de estudio</div>
+              <div class="col-span-4 text-apple-green font-semibold">3 Años de estudio</div>
+            </div>
+
+            <div class="grid grid-cols-12 py-5 px-6 items-center">
+              <div class="col-span-4 font-semibold text-white">Enfoque Curricular</div>
+              <div class="col-span-4 text-apple-grayText">Humanístico-científico tradicional</div>
+              <div class="col-span-4 text-white">Especialización en Diseño + Materias Básicas</div>
+            </div>
+
+            <div class="grid grid-cols-12 py-5 px-6 items-center">
+              <div class="col-span-4 font-semibold text-white">Laboratorios</div>
+              <div class="col-span-4 text-apple-grayText">Laboratorio escolar convencional</div>
+              <div class="col-span-4 text-apple-blue font-semibold flex items-center gap-1.5">
+                <i class="fa-brands fa-apple"></i>
+                <span>Aula especializada Apple iMac</span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-12 py-5 px-6 items-center">
+              <div class="col-span-4 font-semibold text-white">Salida Profesional</div>
+              <div class="col-span-4 text-apple-grayText">Requiere carrera universitaria previa</div>
+              <div class="col-span-4 text-apple-green font-semibold">Doble salida: Empleo inmediato o Universidad</div>
+            </div>
+
+            <div class="grid grid-cols-12 py-5 px-6 items-center">
+              <div class="col-span-4 font-semibold text-white">Sistema de Notas</div>
+              <div class="col-span-4 text-apple-grayText">Tradicional del 1 al 10</div>
+              <div class="col-span-4 text-apple-yellow font-semibold">Evaluación por competencias del 1 al 5</div>
+            </div>
+
+            <div class="grid grid-cols-12 py-5 px-6 items-center">
+              <div class="col-span-4 font-semibold text-white">Inglés Técnico</div>
+              <div class="col-span-4 text-apple-grayText">Inglés estándar</div>
+              <div class="col-span-4 text-white">Inglés aplicado a marcas y briefs</div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== CAMPO LABORAL ==================== -->
+    <section id="campo-laboral" class="py-24 border-b border-white/[0.06]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+          <div>
+            <span
+              class="text-xs font-semibold tracking-wider text-apple-blue uppercase bg-apple-blue/10 px-3 py-1 rounded-full border border-apple-blue/20">
+              Proyección de Futuro
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-4">
+              Inserción en la Economía Creativa y Universidades
+            </h2>
+            <p class="text-apple-grayText text-sm sm:text-base mt-4 leading-relaxed">
+              La formación modular en diseño permite a los graduados trabajar como arte finalistas, creativos junior o
+              gestores de contenido digital mientras estudian su carrera de educación superior.
+            </p>
+
+            <div class="mt-8 space-y-3">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-apple-lightGray">Carreras Universitarias
+                Afines:</h4>
+              <div class="grid grid-cols-2 gap-2.5 text-xs text-slate-300">
+                <div class="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] flex items-center gap-2">
+                  <i class="fa-solid fa-graduation-cap text-apple-blue"></i>
+                  <span>Lic. en Diseño Gráfico</span>
+                </div>
+                <div class="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] flex items-center gap-2">
+                  <i class="fa-solid fa-cube text-apple-blue"></i>
+                  <span>Diseño Industrial</span>
+                </div>
+                <div class="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] flex items-center gap-2">
+                  <i class="fa-solid fa-couch text-apple-blue"></i>
+                  <span>Diseño de Interiores</span>
+                </div>
+                <div class="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] flex items-center gap-2">
+                  <i class="fa-solid fa-bullhorn text-apple-blue"></i>
+                  <span>Mercadeo y Publicidad</span>
+                </div>
+                <div class="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] flex items-center gap-2">
+                  <i class="fa-solid fa-video text-apple-blue"></i>
+                  <span>Comunicaciones</span>
+                </div>
+                <div class="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] flex items-center gap-2">
+                  <i class="fa-solid fa-laptop-code text-apple-blue"></i>
+                  <span>Diseño UI/UX Digital</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card de Sectores Laborales -->
+          <div class="apple-glass-card rounded-3xl p-8 sm:p-10 border border-white/[0.1] relative">
+            <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-briefcase text-apple-green"></i>
+              <span>Sectores de Empleabilidad Directa</span>
+            </h3>
+            <p class="text-xs text-apple-grayText mb-6">
+              Áreas donde nuestros bachilleres técnicos aplican sus habilidades prácticas:
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-300">
+              <div class="p-3 rounded-xl bg-white/[0.04] border border-white/[0.06] flex items-center gap-2.5">
+                <i class="fa-solid fa-check text-apple-green"></i>
+                <span>Agencias de Publicidad</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white/[0.04] border border-white/[0.06] flex items-center gap-2.5">
+                <i class="fa-solid fa-check text-apple-green"></i>
+                <span>Estudios de Diseño</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white/[0.04] border border-white/[0.06] flex items-center gap-2.5">
+                <i class="fa-solid fa-check text-apple-green"></i>
+                <span>Imprentas e Industrias Gráficas</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white/[0.04] border border-white/[0.06] flex items-center gap-2.5">
+                <i class="fa-solid fa-check text-apple-green"></i>
+                <span>Empresas Editoriales y Diarios</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white/[0.04] border border-white/[0.06] flex items-center gap-2.5">
+                <i class="fa-solid fa-check text-apple-green"></i>
+                <span>Departamentos de Marketing</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white/[0.04] border border-white/[0.06] flex items-center gap-2.5">
+                <i class="fa-solid fa-check text-apple-green"></i>
+                <span>Gestión de Redes Sociales</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white/[0.04] border border-white/[0.06] flex items-center gap-2.5">
+                <i class="fa-solid fa-check text-apple-green"></i>
+                <span>Estudios de Fotografía</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white/[0.04] border border-white/[0.06] flex items-center gap-2.5">
+                <i class="fa-solid fa-check text-apple-green"></i>
+                <span>Emprendimiento Freelance</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== FORMULARIO REDISEÑADO ESTILO APPLE PAY / SETUP ASSISTANT ==================== -->
+    <section id="formulario" class="py-24 relative overflow-hidden">
+
+      <!-- Fondo atmosférico Apple -->
+      <div
+        class="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-blue-600/10 rounded-full blur-[140px] pointer-events-none">
+      </div>
+
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <!-- Encabezado del Formulario -->
+        <div class="text-center mb-10">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.06] text-apple-lightGray text-xs font-semibold mb-3 border border-white/[0.1] backdrop-blur-md">
+            <i class="fa-solid fa-shield-halved text-apple-blue"></i>
+            <span>Formulario Oficial de Inscripción 2027</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight apple-hero-title">
+            Registro Oficial de 9° Grado
+          </h2>
+          <p class="text-apple-grayText text-sm mt-2 max-w-lg mx-auto">
+            Ingresa tus datos de estudiante y confirma la modalidad que cursarás en tu etapa de Educación Media.
+          </p>
+        </div>
+
+        <!-- Tarjeta Flotante estilo Apple Setup Assistant -->
+        <div class="apple-glass-card rounded-3xl p-6 sm:p-10 shadow-apple-glass border border-white/[0.1]">
+
+          <!-- Stepper Visual Apple -->
+          <div class="flex items-center justify-between mb-8 pb-6 border-b border-white/[0.08]">
+
+            <div id="step-nav-1" class="flex items-center space-x-3 cursor-pointer" onclick="irAFase(1)">
+              <div id="step-circle-1"
+                class="w-8 h-8 rounded-full bg-apple-blue text-white text-xs font-bold flex items-center justify-center shadow-apple-glow transition">
+                1
+              </div>
+              <div class="hidden sm:block">
+                <div class="text-[10px] font-bold uppercase tracking-wider text-apple-blue">Paso 1</div>
+                <div class="text-xs font-semibold text-white">Datos del Alumno</div>
+              </div>
+            </div>
+
+            <div class="flex-1 mx-3 sm:mx-6 h-[1px] bg-white/[0.1]"></div>
+
+            <div id="step-nav-2" class="flex items-center space-x-3 opacity-40 transition" onclick="irAFase(2)">
+              <div id="step-circle-2"
+                class="w-8 h-8 rounded-full bg-white/[0.1] text-apple-grayText text-xs font-bold flex items-center justify-center transition">
+                2
+              </div>
+              <div class="hidden sm:block">
+                <div class="text-[10px] font-bold uppercase tracking-wider text-apple-grayText">Paso 2</div>
+                <div class="text-xs font-semibold text-slate-400">Modalidad</div>
+              </div>
+            </div>
+
+            <div class="flex-1 mx-3 sm:mx-6 h-[1px] bg-white/[0.1]"></div>
+
+            <div id="step-nav-3" class="flex items-center space-x-3 opacity-40 transition">
+              <div id="step-circle-3"
+                class="w-8 h-8 rounded-full bg-white/[0.1] text-apple-grayText text-xs font-bold flex items-center justify-center transition">
+                3
+              </div>
+              <div class="hidden sm:block">
+                <div class="text-[10px] font-bold uppercase tracking-wider text-apple-grayText">Paso 3</div>
+                <div class="text-xs font-semibold text-slate-400">Confirmación</div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- FORMULARIO PRINCIPAL -->
+          <form id="formBachillerato" class="space-y-6" novalidate>
+
+            <!-- ================= FASE 1: DATOS PERSONALES ================= -->
+            <div id="fase1" class="space-y-6">
+
+              <!-- Selección de Sección 9° Grado (Segmented Buttons Apple) -->
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-apple-grayText mb-2.5">
+                  Sección actual de 9° Grado <span class="text-apple-yellow">*</span>
+                </label>
+                <div class="grid grid-cols-3 gap-3">
+                  <label class="cursor-pointer">
+                    <input type="radio" name="seccion_radio" value="9° Grado Sección A" required class="peer sr-only"
+                      onchange="seleccionarSeccion(this.value)">
+                    <div
+                      class="py-3 px-2 text-center rounded-2xl bg-white/[0.04] border border-white/[0.08] peer-checked:border-apple-blue peer-checked:bg-apple-blue/15 peer-checked:text-apple-blue text-slate-300 font-semibold text-xs sm:text-sm transition duration-200 hover:border-white/20 active:scale-95">
+                      Sección "A"
+                    </div>
+                  </label>
+                  <label class="cursor-pointer">
+                    <input type="radio" name="seccion_radio" value="9° Grado Sección B" class="peer sr-only"
+                      onchange="seleccionarSeccion(this.value)">
+                    <div
+                      class="py-3 px-2 text-center rounded-2xl bg-white/[0.04] border border-white/[0.08] peer-checked:border-apple-blue peer-checked:bg-apple-blue/15 peer-checked:text-apple-blue text-slate-300 font-semibold text-xs sm:text-sm transition duration-200 hover:border-white/20 active:scale-95">
+                      Sección "B"
+                    </div>
+                  </label>
+                  <label class="cursor-pointer">
+                    <input type="radio" name="seccion_radio" value="9° Grado Sección C" class="peer sr-only"
+                      onchange="seleccionarSeccion(this.value)">
+                    <div
+                      class="py-3 px-2 text-center rounded-2xl bg-white/[0.04] border border-white/[0.08] peer-checked:border-apple-blue peer-checked:bg-apple-blue/15 peer-checked:text-apple-blue text-slate-300 font-semibold text-xs sm:text-sm transition duration-200 hover:border-white/20 active:scale-95">
+                      Sección "C"
+                    </div>
+                  </label>
+                </div>
+                <input type="hidden" id="seccion" name="seccion">
+                <p id="errSeccion" class="text-rose-400 text-[11px] mt-1.5 hidden flex items-center gap-1">
+                  <i class="fa-solid fa-circle-exclamation"></i> Por favor selecciona tu sección de 9° Grado.
+                </p>
+              </div>
+
+              <!-- Nombre Completo -->
+              <div>
+                <label for="nombreCompleto" class="block text-xs font-semibold text-apple-grayText mb-1.5">
+                  Apellidos y Nombres completos <span class="text-apple-yellow">*</span>
+                </label>
+                <div class="relative">
+                  <input type="text" id="nombreCompleto" name="nombreCompleto" required
+                    class="w-full pl-10 pr-4 py-3 rounded-2xl bg-white/[0.04] border border-white/[0.08] text-white placeholder-zinc-500 focus:outline-none focus:border-apple-blue focus:ring-1 focus:ring-apple-blue text-sm transition"
+                    placeholder="Ej. Flores Portillo, Andrea Michelle">
+                  <i class="fa-solid fa-user absolute left-3.5 top-3.5 text-zinc-500 text-sm"></i>
+                </div>
+                <p id="errNombre" class="text-rose-400 text-[11px] mt-1 hidden">Ingresa tu nombre completo.</p>
+              </div>
+
+              <!-- Contacto: Correo y Teléfono -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="correo" class="block text-xs font-semibold text-apple-grayText mb-1.5">
+                    Correo Electrónico (Alumno o Responsable) <span class="text-apple-yellow">*</span>
+                  </label>
+                  <div class="relative">
+                    <input type="email" id="correo" name="correo" required
+                      class="w-full pl-10 pr-4 py-3 rounded-2xl bg-white/[0.04] border border-white/[0.08] text-white placeholder-zinc-500 focus:outline-none focus:border-apple-blue focus:ring-1 focus:ring-apple-blue text-sm transition"
+                      placeholder="alumno@ejemplo.edu.sv">
+                    <i class="fa-solid fa-envelope absolute left-3.5 top-3.5 text-zinc-500 text-sm"></i>
+                  </div>
+                  <p id="errCorreo" class="text-rose-400 text-[11px] mt-1 hidden">Ingresa un correo electrónico válido.
+                  </p>
+                </div>
+
+                <div>
+                  <label for="telefono" class="block text-xs font-semibold text-apple-grayText mb-1.5">
+                    Teléfono de Contacto (WhatsApp) <span class="text-apple-yellow">*</span>
+                  </label>
+                  <div class="relative">
+                    <input type="tel" id="telefono" name="telefono" required
+                      class="w-full pl-10 pr-4 py-3 rounded-2xl bg-white/[0.04] border border-white/[0.08] text-white placeholder-zinc-500 focus:outline-none focus:border-apple-blue focus:ring-1 focus:ring-apple-blue text-sm transition"
+                      placeholder="Ej. 7000-0000">
+                    <i class="fa-brands fa-whatsapp absolute left-3.5 top-3.5 text-zinc-500 text-sm"></i>
+                  </div>
+                  <p id="errTelefono" class="text-rose-400 text-[11px] mt-1 hidden">Ingresa un número telefónico.</p>
+                </div>
+              </div>
+
+              <!-- Botón Continuar a Fase 2 -->
+              <div class="pt-4 flex justify-end">
+                <button type="button" onclick="validarYIrAFase2()"
+                  class="w-full sm:w-auto px-7 py-3 rounded-full bg-apple-blue hover:bg-apple-blueHover text-white font-semibold text-xs sm:text-sm shadow-apple-glow transition active:scale-[0.98] flex items-center justify-center space-x-2">
+                  <span>Continuar a Selección de Modalidad</span>
+                  <i class="fa-solid fa-arrow-right text-xs"></i>
+                </button>
+              </div>
+
+            </div>
+
+
+            <!-- ================= FASE 2: SELECCIÓN DE MODALIDAD ================= -->
+            <div id="fase2" class="space-y-6 hidden">
+
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-apple-grayText mb-3">
+                  Modalidad de Bachillerato 2027 <span class="text-apple-yellow">*</span>
+                </label>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                  <!-- Opción: Bachillerato General -->
+                  <label class="relative block cursor-pointer group">
+                    <input type="radio" name="modalidad" value="Bachillerato General" required
+                      onchange="cambioModalidad()" class="peer sr-only">
+                    <div
+                      class="h-full p-6 rounded-3xl bg-white/[0.03] border-2 border-white/[0.08] peer-checked:border-apple-blue peer-checked:bg-apple-blue/[0.08] transition duration-200 group-hover:border-white/20 relative">
+
+                      <div class="flex items-center justify-between mb-4">
+                        <div
+                          class="w-10 h-10 rounded-2xl bg-white/[0.08] text-apple-blue flex items-center justify-center text-lg">
+                          <i class="fa-solid fa-book-bookmark"></i>
+                        </div>
+                        <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-white/[0.08] text-slate-300">
+                          2 Años
+                        </span>
+                      </div>
+
+                      <h4 class="text-base font-bold text-white group-hover:text-apple-blue transition">Bachillerato
+                        General</h4>
+                      <p class="text-xs text-apple-grayText mt-2 leading-relaxed">
+                        Formación académica humanístico-científica enfocada exclusivamente en la preparación para la
+                        universidad.
+                      </p>
+
+                      <div class="mt-4 pt-3 border-t border-white/[0.06] text-[11px] text-apple-grayText">
+                        Escala tradicional de notas 1 al 10.
+                      </div>
+                    </div>
+                  </label>
+
+                  <!-- Opción: Bachillerato Técnico en Diseño Gráfico -->
+                  <label class="relative block cursor-pointer group">
+                    <input type="radio" name="modalidad" value="Bachillerato Técnico Vocacional" required
+                      onchange="cambioModalidad()" class="peer sr-only">
+                    <div
+                      class="h-full p-6 rounded-3xl bg-white/[0.03] border-2 border-white/[0.08] peer-checked:border-apple-green peer-checked:bg-emerald-500/[0.08] transition duration-200 group-hover:border-white/20 relative">
+
+                      <div class="flex items-center justify-between mb-4">
+                        <div
+                          class="w-10 h-10 rounded-2xl bg-emerald-500/15 text-apple-green flex items-center justify-center text-lg">
+                          <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/20 text-apple-green">
+                          3 Años Vocacional
+                        </span>
+                      </div>
+
+                      <h4 class="text-base font-bold text-white group-hover:text-apple-green transition">Técnico en
+                        Diseño Gráfico</h4>
+                      <p class="text-xs text-apple-grayText mt-2 leading-relaxed">
+                        Formación profesional en aula Apple iMac: diseño vectorial, editorial, empaques, fotografía y
+                        doble salida laboral.
+                      </p>
+
+                      <div
+                        class="mt-4 pt-3 border-t border-white/[0.06] text-[11px] text-apple-green font-medium flex items-center gap-1.5">
+                        <i class="fa-solid fa-award"></i> Evaluación por competencias 1 al 5
+                      </div>
+                    </div>
+                  </label>
+
+                </div>
+
+                <p id="errModalidad" class="text-rose-400 text-[11px] mt-2 hidden">
+                  Por favor selecciona la modalidad que deseas cursar.
+                </p>
+              </div>
+
+              <!-- Banner de Confirmación de Especialidad Técnica -->
+              <div id="panelEspecialidadTecnica"
+                class="hidden p-5 rounded-2xl bg-emerald-950/20 border border-emerald-500/30">
+                <div class="flex items-start gap-3">
+                  <div
+                    class="w-9 h-9 rounded-xl bg-emerald-500/20 text-apple-green flex items-center justify-center shrink-0 mt-0.5">
+                    <i class="fa-solid fa-pen-nib text-sm"></i>
+                  </div>
+                  <div>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-apple-green block">Especialidad
+                      Asignada</span>
+                    <span class="text-sm font-bold text-white">Bachillerato Técnico Vocacional en Diseño Gráfico</span>
+                    <p class="text-xs text-slate-300 mt-1">
+                      Cursarás los 8 módulos por año lectivo en el laboratorio equipado con computadoras Apple iMac.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Motivo o Comentarios -->
+              <div>
+                <label for="motivo" class="block text-xs font-semibold text-apple-grayText mb-1.5">
+                  Motivo de tu elección o aspiraciones vocacionales (Opcional)
+                </label>
+                <textarea id="motivo" name="motivo" rows="3"
+                  class="w-full px-4 py-3 rounded-2xl bg-white/[0.04] border border-white/[0.08] text-white placeholder-zinc-500 focus:outline-none focus:border-apple-blue focus:ring-1 focus:ring-apple-blue text-sm transition"
+                  placeholder="¿Qué metas o proyectos te inspiran a elegir esta opción?"></textarea>
+              </div>
+
+              <!-- Botones de Navegación -->
+              <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <button type="button" onclick="irAFase(1)"
+                  class="w-full sm:w-auto px-6 py-3 rounded-full bg-white/[0.06] hover:bg-white/[0.1] text-apple-lightGray border border-white/[0.1] text-xs font-semibold transition">
+                  <i class="fa-solid fa-arrow-left mr-1.5"></i>
+                  <span>Regresar a Datos Personales</span>
+                </button>
+
+                <button type="button" onclick="validarYIrAFase3()"
+                  class="w-full sm:w-auto px-7 py-3 rounded-full bg-apple-blue hover:bg-apple-blueHover text-white font-semibold text-xs sm:text-sm shadow-apple-glow transition active:scale-[0.98] flex items-center justify-center space-x-2">
+                  <span>Revisar Ficha de Confirmación</span>
+                  <i class="fa-solid fa-arrow-right text-xs"></i>
+                </button>
+              </div>
+
+            </div>
+
+
+            <!-- ================= FASE 3: RESUMEN DIGITAL Y ENVÍO A FIREBASE ================= -->
+            <div id="fase3" class="space-y-6 hidden">
+
+              <div class="text-center pb-2">
+                <span class="text-xs font-bold text-apple-blue uppercase tracking-wider">Verificación Final</span>
+                <h3 class="text-xl font-bold text-white mt-1">Resumen de tu Inscripción 2027</h3>
+                <p class="text-xs text-apple-grayText">Por favor revisa cuidadosamente que tus datos sean correctos
+                  antes de confirmar.</p>
+              </div>
+
+              <!-- Tarjeta Estilo Apple Wallet / Boarding Pass -->
+              <div class="rounded-3xl p-6 sm:p-7 bg-white/[0.03] border border-white/[0.12] space-y-4">
+
+                <div class="flex items-center justify-between pb-4 border-b border-white/[0.08]">
+                  <div class="flex items-center space-x-2.5">
+                    <div
+                      class="w-8 h-8 rounded-lg bg-apple-blue/20 text-apple-blue flex items-center justify-center text-xs font-bold">
+                      CSJ
+                    </div>
+                    <div>
+                      <div class="text-[10px] uppercase font-bold text-apple-grayText">Colegio San José • Educación
+                        Media</div>
+                      <div class="text-xs font-bold text-white">Elección de Bachillerato 2027</div>
+                    </div>
+                  </div>
+                  <span id="resumenBadgeModalidad"
+                    class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-white/[0.08] text-white">
+                    Modalidad
+                  </span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+                  <div>
+                    <span class="text-apple-grayText text-[11px] block">Estudiante:</span>
+                    <span id="resumenNombre" class="font-bold text-white block mt-0.5">-</span>
+                  </div>
+                  <div>
+                    <span class="text-apple-grayText text-[11px] block">Sección Actual:</span>
+                    <span id="resumenSeccion" class="font-bold text-white block mt-0.5">-</span>
+                  </div>
+                  <div>
+                    <span class="text-apple-grayText text-[11px] block">Contacto:</span>
+                    <span id="resumenTelefono" class="font-bold text-white block mt-0.5">-</span>
+                  </div>
+                </div>
+
+                <div class="pt-3 border-t border-white/[0.08]">
+                  <span class="text-apple-grayText text-[11px] block">Modalidad Elegida:</span>
+                  <div id="resumenModalidadCompleta" class="text-sm font-bold text-apple-blue mt-0.5">
+                    -
+                  </div>
+                  <div id="resumenDetalleLaboratorio" class="text-[11px] text-slate-400 mt-1">
+                    -
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Indicador de destino de datos -->
+              <div
+                class="flex items-center justify-between px-4 py-3 rounded-2xl bg-white/[0.02] border border-white/[0.06] text-xs text-apple-grayText">
+                <div class="flex items-center space-x-2">
+                  <i class="fa-solid fa-cloud text-apple-blue"></i>
+                  <span>Almacenamiento:</span>
+                </div>
+                <span id="resumenDestinoDB" class="font-medium text-slate-300">Firebase Firestore (Nube)</span>
+              </div>
+
+              <!-- Botones de Acción Final -->
+              <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <button type="button" onclick="irAFase(2)"
+                  class="w-full sm:w-auto px-6 py-3 rounded-full bg-white/[0.06] hover:bg-white/[0.1] text-apple-lightGray border border-white/[0.1] text-xs font-semibold transition">
+                  <i class="fa-solid fa-arrow-left mr-1.5"></i>
+                  <span>Modificar Datos</span>
+                </button>
+
+                <button type="submit" id="btnConfirmarYGuardar"
+                  class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-gradient-to-r from-apple-blue to-blue-600 hover:brightness-110 text-white font-bold text-xs sm:text-sm shadow-apple-glow transition active:scale-[0.98] flex items-center justify-center space-x-2">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span>Confirmar e Inscribirme Ahora</span>
+                </button>
+              </div>
+
+            </div>
+
+            <!-- ALERTAS DE RESULTADO ESTILO NOTIFICACIÓN APPLE -->
+            <div id="alertaExito"
+              class="hidden p-6 rounded-3xl bg-emerald-950/40 border border-emerald-500/40 text-center space-y-3">
+              <div
+                class="w-12 h-12 rounded-full bg-emerald-500/20 text-apple-green flex items-center justify-center text-xl mx-auto shadow-apple-glow-green">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <h4 class="text-base font-bold text-white">¡Inscripción Registrada con Éxito!</h4>
+              <p class="text-xs text-slate-300 max-w-md mx-auto">
+                Tu selección para el año lectivo 2027 ha sido guardada satisfactoriamente en la base de datos de <strong
+                  class="text-white">Firebase Firestore</strong>.
+              </p>
+
+              <div class="pt-2 flex flex-wrap justify-center gap-3">
+                <button type="button" onclick="imprimirComprobante()"
+                  class="px-5 py-2 rounded-full bg-white/[0.08] hover:bg-white/[0.15] text-white text-xs font-semibold border border-white/[0.12] flex items-center gap-2 transition">
+                  <i class="fa-solid fa-print"></i>
+                  <span>Imprimir Comprobante</span>
+                </button>
+                <button type="button" onclick="reiniciarFormulario()"
+                  class="px-5 py-2 rounded-full bg-apple-blue hover:bg-apple-blueHover text-white text-xs font-semibold transition">
+                  <span>Nueva Inscripción</span>
+                </button>
+              </div>
+            </div>
+
+            <div id="alertaError"
+              class="hidden p-5 rounded-2xl bg-rose-950/40 border border-rose-500/40 text-rose-200 text-center text-xs space-y-2">
+              <i class="fa-solid fa-circle-xmark text-2xl text-rose-400"></i>
+              <div class="font-bold text-white text-sm">Hubo un problema al guardar</div>
+              <p id="alertaErrorMensaje">Ocurrió un error al contactar con la base de datos. Por favor revisa la consola
+                o tu conexión.</p>
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ==================== FOOTER ESTILO APPLE ==================== -->
+  <footer class="bg-black text-apple-grayText py-12 border-t border-white/[0.06] text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+
+      <div class="text-[11px] text-zinc-500 border-b border-white/[0.06] pb-6 space-y-2">
+        <p>1. El Bachillerato Técnico Vocacional en Diseño Gráfico consta de 3 años lectivos con 8 módulos anuales y
+          titulación técnica oficial.</p>
+        <p>2. El Bachillerato General comprende 2 años lectivos con formación humanístico-científica enfocada en
+          estudios universitarios.</p>
+        <p>3. Los datos registrados en esta plataforma son procesados y almacenados con seguridad en Firebase Firestore
+          para uso exclusivo de coordinación académica.</p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center space-x-2 text-white font-semibold">
+          <span>Colegio San José</span>
+          <span class="text-zinc-600">•</span>
+          <span class="text-apple-yellow">AD ASTRA</span>
+          <span class="text-zinc-600">•</span>
+          <span class="text-apple-grayText font-normal">Educación Media 2027</span>
+        </div>
+
+        <div class="flex items-center space-x-6 text-[11px] text-zinc-500">
+          <a href="#" class="hover:text-white transition">Privacidad</a>
+          <a href="#" class="hover:text-white transition">Reglamento</a>
+          <a href="#formulario" class="hover:text-white transition">Inscripciones 9°</a>
+          <a href="admin.html" class="hover:text-zinc-300 transition flex items-center gap-1 opacity-30 hover:opacity-100" title="Panel de Administración">
+            <i class="fa-solid fa-lock text-[9px]"></i>
+            <span>Admin</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="text-center text-[10px] text-zinc-600 pt-2">
+        © 2026-2027 Colegio San José. Diseñado bajo lineamientos de diseño Apple y Google Firebase.
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ==================== MODAL DE CONFIGURACIÓN DE FIREBASE ==================== -->
+  <div id="modalFirebase"
+    class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="apple-glass rounded-3xl p-6 sm:p-8 max-w-lg w-full border border-white/[0.15] shadow-2xl space-y-5">
+
+      <div class="flex items-center justify-between pb-3 border-b border-white/[0.08]">
+        <div class="flex items-center space-x-2.5">
+          <div class="w-8 h-8 rounded-xl bg-amber-500/15 text-apple-yellow flex items-center justify-center text-sm">
+            <i class="fa-solid fa-fire"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-white">Configuración de Firebase</h3>
+            <p class="text-[11px] text-apple-grayText">Conecta con tu proyecto de Google Firebase</p>
+          </div>
+        </div>
+        <button onclick="cerrarModalFirebase()" class="text-zinc-400 hover:text-white text-lg">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <p class="text-xs text-apple-grayText leading-relaxed">
+        Pega a continuación tus credenciales de Firebase (las obtienes en tu <strong>Firebase Console &gt; Configuración
+          del Proyecto &gt; Tus apps &gt; Web SDK</strong>):
+      </p>
+
+      <div class="space-y-3 text-xs">
+        <div>
+          <label class="block text-zinc-400 font-semibold mb-1">API Key (apiKey):</label>
+          <input type="text" id="fbApiKey"
+            class="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.04] border border-white/[0.1] text-white focus:outline-none focus:border-apple-blue text-xs font-mono"
+            placeholder="AIzaSy...">
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-zinc-400 font-semibold mb-1">Auth Domain:</label>
+            <input type="text" id="fbAuthDomain"
+              class="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.04] border border-white/[0.1] text-white focus:outline-none focus:border-apple-blue text-xs font-mono"
+              placeholder="proyecto.firebaseapp.com">
+          </div>
+          <div>
+            <label class="block text-zinc-400 font-semibold mb-1">Project ID (projectId):</label>
+            <input type="text" id="fbProjectId"
+              class="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.04] border border-white/[0.1] text-white focus:outline-none focus:border-apple-blue text-xs font-mono"
+              placeholder="bachtec-2027">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-zinc-400 font-semibold mb-1">Storage Bucket:</label>
+            <input type="text" id="fbStorageBucket"
+              class="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.04] border border-white/[0.1] text-white focus:outline-none focus:border-apple-blue text-xs font-mono"
+              placeholder="proyecto.appspot.com">
+          </div>
+          <div>
+            <label class="block text-zinc-400 font-semibold mb-1">App ID (appId):</label>
+            <input type="text" id="fbAppId"
+              class="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.04] border border-white/[0.1] text-white focus:outline-none focus:border-apple-blue text-xs font-mono"
+              placeholder="1:123456:web:abcd...">
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <button type="button" onclick="restablecerConfiguracionDemo()"
+          class="text-xs text-zinc-400 hover:text-white underline">
+          Usar modo demostración local
+        </button>
+        <div class="flex items-center space-x-2 w-full sm:w-auto">
+          <button type="button" onclick="cerrarModalFirebase()"
+            class="flex-1 sm:flex-initial px-4 py-2.5 rounded-xl bg-white/[0.08] hover:bg-white/[0.15] text-white text-xs font-semibold">
+            Cancelar
+          </button>
+          <button type="button" onclick="guardarConfigFirebase()"
+            class="flex-1 sm:flex-initial px-5 py-2.5 rounded-xl bg-apple-blue hover:bg-apple-blueHover text-white text-xs font-bold shadow-apple-glow">
+            Guardar y Conectar
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ==================== DRAWER ADMIN: VER REGISTROS (FIRESTORE / LOCAL) ==================== -->
+  <div id="adminDrawer" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-md hidden flex justify-end">
+    <div class="w-full max-w-2xl bg-neutral-950 border-l border-white/[0.1] h-full flex flex-col p-6 shadow-2xl">
+
+      <div class="flex items-center justify-between pb-4 border-b border-white/[0.08]">
+        <div>
+          <div class="flex items-center space-x-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-apple-blue">Consola de Control</span>
+            <span id="drawerBadgeTotal"
+              class="px-2 py-0.5 rounded-full bg-apple-blue/20 text-apple-blue text-[11px] font-bold">0 Alumnos</span>
+          </div>
+          <h3 class="text-lg font-bold text-white mt-0.5">Estudiantes Inscritos 2027</h3>
+        </div>
+        <button onclick="cerrarAdminDrawer()"
+          class="w-8 h-8 rounded-full bg-white/[0.08] text-white flex items-center justify-center hover:bg-white/[0.15]">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+
+      <!-- Barra de Filtros y Exportación -->
+      <div class="py-4 flex flex-wrap items-center justify-between gap-3 border-b border-white/[0.06]">
+        <div class="relative flex-1 min-w-[200px]">
+          <input type="text" id="filtroBuscar" oninput="filtrarRegistros()" placeholder="Buscar por nombre o NIE..."
+            class="w-full pl-9 pr-3 py-2 rounded-xl bg-white/[0.04] border border-white/[0.1] text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-apple-blue">
+          <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-zinc-500 text-xs"></i>
+        </div>
+        <div class="flex items-center space-x-2">
+          <button onclick="exportarCSV()"
+            class="px-3.5 py-2 rounded-xl bg-emerald-500/20 text-apple-green hover:bg-emerald-500/30 text-xs font-semibold flex items-center space-x-1.5 transition">
+            <i class="fa-solid fa-file-excel"></i>
+            <span>Exportar CSV</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Lista de Estudiantes Inscritos -->
+      <div id="listaRegistros" class="flex-1 overflow-y-auto py-4 space-y-3 pr-1 custom-scrollbar">
+        <!-- Generado dinámicamente -->
+        <div class="text-center py-12 text-apple-grayText text-xs">
+          <i class="fa-solid fa-inbox text-3xl mb-2 text-zinc-600 block"></i>
+          No hay inscripciones registradas aún.
+        </div>
+      </div>
+
+      <div class="pt-4 border-t border-white/[0.08] text-[11px] text-zinc-500 flex items-center justify-between">
+        <span>Colegio San José • Registro de Bachillerato</span>
+        <button onclick="limpiarRegistrosLocales()" class="text-rose-400 hover:underline">Limpiar registros
+          locales</button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ==================== SCRIPT PRINCIPAL & INTEGRACIÓN FIREBASE ==================== -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import {
+      getFirestore,
+      collection,
+      addDoc,
+      serverTimestamp,
+      getDocs,
+      query,
+      orderBy,
+      onSnapshot
+    } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+    /* ==============================================================
+     * CONFIGURACIÓN OFICIAL DE GOOGLE FIREBASE (bachtec-9190c)
+     * ============================================================== */
+    const DEFAULT_FIREBASE_CONFIG = {
+      apiKey: "AIzaSyCqkMRviBb5rMd4YucN2FLghQ4A3OQXVO4",
+      authDomain: "bachtec-9190c.firebaseapp.com",
+      projectId: "bachtec-9190c",
+      storageBucket: "bachtec-9190c.firebasestorage.app",
+      messagingSenderId: "1005686162690",
+      appId: "1:1005686162690:web:aeb78e8c559620906b2e1b",
+      measurementId: "G-XEBG4SCX03"
+    };
+
+    let db = null;
+    let firebaseActivo = false;
+    let listaInscripciones = [];
+
+    // Función para inicializar Firebase con configuración oficial o localStorage
+    function inicializarFirebase() {
+      const configGuardada = localStorage.getItem('csj_firebase_config');
+      let config = DEFAULT_FIREBASE_CONFIG;
+
+      if (configGuardada) {
+        try {
+          const parsed = JSON.parse(configGuardada);
+          if (parsed && parsed.apiKey) {
+            config = parsed;
+          }
+        } catch (e) {
+          console.error("Error al parsear config de Firebase guardada:", e);
+        }
+      }
+
+      // Rellenar los inputs del modal de configuración con los valores actuales
+      document.getElementById('fbApiKey').value = config.apiKey || "";
+      document.getElementById('fbAuthDomain').value = config.authDomain || "";
+      document.getElementById('fbProjectId').value = config.projectId || "";
+      document.getElementById('fbStorageBucket').value = config.storageBucket || "";
+      document.getElementById('fbAppId').value = config.appId || "";
+
+      // Validar si las credenciales mínimas existen
+      if (config.apiKey && config.projectId) {
+        try {
+          const app = initializeApp(config);
+          db = getFirestore(app);
+          firebaseActivo = true;
+          actualizarUIEstadoFirebase(true, config.projectId);
+          escucharRegistrosFirestore();
+          return;
+        } catch (error) {
+          console.warn("No se pudo conectar a Firebase con las credenciales dadas:", error);
+        }
+      }
+
+      // Si no hay configuración válida, activar modo Local Storage (Demo)
+      firebaseActivo = false;
+      actualizarUIEstadoFirebase(false);
+      cargarRegistrosLocales();
+    }
+
+    function actualizarUIEstadoFirebase(conectado, projectId = "") {
+      const dot = document.getElementById('firebaseStatusDot');
+      const text = document.getElementById('firebaseStatusText');
+      const destinoDB = document.getElementById('resumenDestinoDB');
+
+      if (conectado) {
+        if (dot) dot.className = "w-2 h-2 rounded-full bg-apple-green";
+        if (text) text.innerHTML = `Firebase: <strong class="text-white">Conectado a Firestore</strong> (${projectId})`;
+        if (destinoDB) destinoDB.textContent = `Firebase Firestore (${projectId})`;
+      } else {
+        if (dot) dot.className = "w-2 h-2 rounded-full bg-amber-400 status-dot";
+        if (text) text.innerHTML = `Firebase: Modo Local`;
+        if (destinoDB) destinoDB.textContent = "Almacenamiento Local";
+      }
+    }
+
+    // Escuchar cambios en Firestore en tiempo real si está activo
+    function escucharRegistrosFirestore() {
+      if (!db) return;
+      try {
+        const coleccionRef = collection(db, "inscripciones_bachillerato_2027");
+        onSnapshot(coleccionRef, (snapshot) => {
+          listaInscripciones = [];
+          snapshot.forEach((doc) => {
+            listaInscripciones.push({ id: doc.id, ...doc.data() });
+          });
+          actualizarListaRegistrosUI();
+        }, (error) => {
+          console.warn("Error al escuchar Firestore:", error);
+          cargarRegistrosLocales();
+        });
+      } catch (err) {
+        console.error("Error al configurar listener de Firestore:", err);
+      }
+    }
+
+    function cargarRegistrosLocales() {
+      const data = localStorage.getItem('csj_inscripciones_locales');
+      if (data) {
+        try {
+          listaInscripciones = JSON.parse(data);
+        } catch (e) {
+          listaInscripciones = [];
+        }
+      } else {
+        listaInscripciones = [];
+      }
+      actualizarListaRegistrosUI();
+    }
+
+    function actualizarListaRegistrosUI() {
+      const badge = document.getElementById('totalRegistrosBadge');
+      const drawerBadge = document.getElementById('drawerBadgeTotal');
+      const container = document.getElementById('listaRegistros');
+
+      badge.textContent = listaInscripciones.length;
+      drawerBadge.textContent = `${listaInscripciones.length} Alumnos`;
+
+      if (listaInscripciones.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-12 text-apple-grayText text-xs">
+            <i class="fa-solid fa-inbox text-3xl mb-2 text-zinc-600 block"></i>
+            No hay inscripciones registradas aún.
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = listaInscripciones.map((reg) => {
+        const esTecnico = reg.modalidad && reg.modalidad.includes('Técnico');
+        const fecha = reg.fechaEnvio || 'Reciente';
+        return `
+          <div class="p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08] hover:border-white/20 transition space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-white">${reg.nombreCompleto}</span>
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold ${esTecnico ? 'bg-emerald-500/20 text-apple-green' : 'bg-blue-500/20 text-apple-blue'}">
+                ${reg.modalidad}
+              </span>
+            </div>
+            <div class="grid grid-cols-2 gap-2 text-[11px] text-apple-grayText">
+              <div><span class="text-zinc-500">NIE:</span> ${reg.nie}</div>
+              <div><span class="text-zinc-500">Sección:</span> ${reg.seccion}</div>
+              <div><span class="text-zinc-500">Tel:</span> ${reg.telefono}</div>
+              <div><span class="text-zinc-500">Fecha:</span> ${fecha}</div>
+            </div>
+            ${reg.motivo ? `<div class="text-[11px] text-zinc-400 bg-white/[0.02] p-2 rounded-lg italic">"${reg.motivo}"</div>` : ''}
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Guardar los datos en Firebase Firestore o LocalStorage
+    async function guardarInscripcion(datos) {
+      if (firebaseActivo && db) {
+        try {
+          const docRef = await addDoc(collection(db, "inscripciones_bachillerato_2027"), {
+            ...datos,
+            fechaRegistro: serverTimestamp(),
+            fechaEnvio: new Date().toLocaleString('es-SV')
+          });
+          return { exito: true, id: docRef.id, motor: 'Firebase Firestore' };
+        } catch (error) {
+          console.error("Error al guardar en Firestore:", error);
+          throw error;
+        }
+      } else {
+        // Fallback local
+        const nuevoRegistro = {
+          id: 'local_' + Date.now(),
+          ...datos,
+          fechaEnvio: new Date().toLocaleString('es-SV')
+        };
+        listaInscripciones.unshift(nuevoRegistro);
+        localStorage.setItem('csj_inscripciones_locales', JSON.stringify(listaInscripciones));
+        actualizarListaRegistrosUI();
+        return { exito: true, id: nuevoRegistro.id, motor: 'Almacenamiento Local' };
+      }
+    }
+
+    /* ==============================================================
+     * GESTIÓN DEL FORMULARIO Y VALIDACIONES
+     * ============================================================== */
+    const form = document.getElementById('formBachillerato');
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const btn = document.getElementById('btnConfirmarYGuardar');
+      const alertaExito = document.getElementById('alertaExito');
+      const alertaError = document.getElementById('alertaError');
+
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Guardando en Firebase...';
+      alertaExito.classList.add('hidden');
+      alertaError.classList.add('hidden');
+
+      const modalidad = document.querySelector('input[name="modalidad"]:checked')?.value;
+
+      const datos = {
+        nombreCompleto: document.getElementById('nombreCompleto').value.trim(),
+        seccion: document.getElementById('seccion').value,
+        modalidad: modalidad,
+        especialidad: modalidad === 'Bachillerato Técnico Vocacional' ? 'Diseño Gráfico' : 'N/A (General)',
+        correo: document.getElementById('correo').value.trim(),
+        telefono: document.getElementById('telefono').value.trim(),
+        motivo: document.getElementById('motivo').value.trim()
+      };
+
+      try {
+        const resultado = await guardarInscripcion(datos);
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-circle-check mr-2"></i> Confirmar e Inscribirme Ahora';
+
+        // Ocultar fases del form y mostrar alerta de éxito
+        document.getElementById('fase3').classList.add('hidden');
+        alertaExito.classList.remove('hidden');
+
+        // Guardar copia del último comprobante para impresión
+        window.ultimoComprobante = datos;
+
+      } catch (err) {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-circle-check mr-2"></i> Confirmar e Inscribirme Ahora';
+        document.getElementById('alertaErrorMensaje').textContent = "Error de conexión con Firebase: " + (err.message || "Por favor verifica tus credenciales o conexión.");
+        alertaError.classList.remove('hidden');
+      }
+    });
+
+    // Funciones globales expuestas al window para los onclicks
+    window.guardarConfigFirebase = function () {
+      const config = {
+        apiKey: document.getElementById('fbApiKey').value.trim(),
+        authDomain: document.getElementById('fbAuthDomain').value.trim(),
+        projectId: document.getElementById('fbProjectId').value.trim(),
+        storageBucket: document.getElementById('fbStorageBucket').value.trim(),
+        appId: document.getElementById('fbAppId').value.trim()
+      };
+
+      if (!config.apiKey || !config.projectId) {
+        alert("Por favor ingresa al menos el API Key y el Project ID de Firebase.");
+        return;
+      }
+
+      localStorage.setItem('csj_firebase_config', JSON.stringify(config));
+      cerrarModalFirebase();
+      inicializarFirebase();
+      alert("¡Configuración de Firebase guardada! Conectando a Firestore...");
+    };
+
+    window.restablecerConfiguracionDemo = function () {
+      localStorage.removeItem('csj_firebase_config');
+      document.getElementById('fbApiKey').value = "";
+      document.getElementById('fbAuthDomain').value = "";
+      document.getElementById('fbProjectId').value = "";
+      document.getElementById('fbStorageBucket').value = "";
+      document.getElementById('fbAppId').value = "";
+      cerrarModalFirebase();
+      inicializarFirebase();
+    };
+
+    window.abrirModalFirebase = function () {
+      document.getElementById('modalFirebase').classList.remove('hidden');
+    };
+
+    window.cerrarModalFirebase = function () {
+      document.getElementById('modalFirebase').classList.add('hidden');
+    };
+
+    window.abrirAdminDrawer = function () {
+      document.getElementById('adminDrawer').classList.remove('hidden');
+    };
+
+    window.cerrarAdminDrawer = function () {
+      document.getElementById('adminDrawer').classList.add('hidden');
+    };
+
+    window.limpiarRegistrosLocales = function () {
+      if (confirm("¿Deseas vaciar la lista de registros guardados localmente?")) {
+        localStorage.removeItem('csj_inscripciones_locales');
+        listaInscripciones = [];
+        actualizarListaRegistrosUI();
+      }
+    };
+
+    window.exportarCSV = function () {
+      if (listaInscripciones.length === 0) {
+        alert("No hay registros para exportar.");
+        return;
+      }
+
+      let csv = "NIE,Nombre Completo,Seccion,Modalidad,Especialidad,Correo,Telefono,Fecha,Motivo\n";
+      listaInscripciones.forEach(r => {
+        csv += `"${r.nie}","${r.nombreCompleto}","${r.seccion}","${r.modalidad}","${r.especialidad || ''}","${r.correo}","${r.telefono}","${r.fechaEnvio || ''}","${(r.motivo || '').replace(/"/g, '""')}"\n`;
+      });
+
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.setAttribute("href", url);
+      link.setAttribute("download", `Inscripciones_Bachillerato_2027_${new Date().toISOString().slice(0, 10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    };
+
+    window.filtrarRegistros = function () {
+      const q = document.getElementById('filtroBuscar').value.toLowerCase();
+      const items = document.getElementById('listaRegistros').children;
+      for (let item of items) {
+        item.style.display = item.textContent.toLowerCase().includes(q) ? 'block' : 'none';
+      }
+    };
+
+    window.imprimirComprobante = function () {
+      const comp = window.ultimoComprobante;
+      if (!comp) return;
+
+      const ventana = window.open('', '_blank');
+      ventana.document.write(`
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>Comprobante de Inscripción 2027 - ${comp.nombreCompleto}</title>
+          <style>
+            body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding: 40px; color: #111; }
+            .ticket { border: 2px solid #222; border-radius: 16px; padding: 24px; max-width: 600px; margin: auto; }
+            .header { text-align: center; border-bottom: 2px solid #eee; padding-bottom: 16px; margin-bottom: 20px; }
+            .title { font-size: 20px; font-weight: bold; margin: 0; }
+            .subtitle { font-size: 13px; color: #666; margin-top: 4px; }
+            .row { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 14px; border-bottom: 1px dotted #ccc; padding-bottom: 4px; }
+            .label { font-weight: bold; color: #444; }
+            .footer { text-align: center; font-size: 12px; color: #888; margin-top: 24px; }
+          </style>
+        </head>
+        <body onload="window.print()">
+          <div class="ticket">
+            <div class="header">
+              <div class="title">COLEGIO SAN JOSÉ • AD ASTRA</div>
+              <div class="subtitle">Comprobante Oficial de Elección de Bachillerato 2027</div>
+            </div>
+            <div class="row"><span class="label">Estudiante:</span> <span>${comp.nombreCompleto}</span></div>
+            <div class="row"><span class="label">Sección Actual:</span> <span>${comp.seccion}</span></div>
+            <div class="row"><span class="label">Modalidad:</span> <span>${comp.modalidad}</span></div>
+            <div class="row"><span class="label">Especialidad:</span> <span>${comp.especialidad}</span></div>
+            <div class="row"><span class="label">Contacto:</span> <span>${comp.telefono}</span></div>
+            <div class="row"><span class="label">Correo:</span> <span>${comp.correo}</span></div>
+            <div class="row"><span class="label">Fecha de Registro:</span> <span>${new Date().toLocaleString('es-SV')}</span></div>
+            <div class="footer">
+              Este documento certifica tu elección para el proceso de matrícula oficial 2027.
+            </div>
+          </div>
+        </body>
+        </html>
+      `);
+      ventana.document.close();
+    };
+
+    window.reiniciarFormulario = function () {
+      document.getElementById('formBachillerato').reset();
+      document.getElementById('seccion').value = '';
+      document.getElementById('alertaExito').classList.add('hidden');
+      document.getElementById('alertaError').classList.add('hidden');
+      irAFase(1);
+    };
+
+    // Inicializar al cargar
+    inicializarFirebase();
+  </script>
+
+  <!-- Script UI Auxiliar para Control de Pasos y Tabs -->
+  <script>
+    function seleccionarSeccion(valor) {
+      document.getElementById('seccion').value = valor;
+      document.getElementById('errSeccion').classList.add('hidden');
+    }
+
+    function validarYIrAFase2() {
+      const seccion = document.getElementById('seccion').value;
+      const nombre = document.getElementById('nombreCompleto').value.trim();
+      const correo = document.getElementById('correo').value.trim();
+      const telefono = document.getElementById('telefono').value.trim();
+
+      let valido = true;
+
+      if (!seccion) {
+        document.getElementById('errSeccion').classList.remove('hidden');
+        valido = false;
+      } else {
+        document.getElementById('errSeccion').classList.add('hidden');
+      }
+
+      if (!nombre) {
+        document.getElementById('errNombre').classList.remove('hidden');
+        valido = false;
+      } else {
+        document.getElementById('errNombre').classList.add('hidden');
+      }
+
+      if (!correo || !correo.includes('@')) {
+        document.getElementById('errCorreo').classList.remove('hidden');
+        valido = false;
+      } else {
+        document.getElementById('errCorreo').classList.add('hidden');
+      }
+
+      if (!telefono) {
+        document.getElementById('errTelefono').classList.remove('hidden');
+        valido = false;
+      } else {
+        document.getElementById('errTelefono').classList.add('hidden');
+      }
+
+      if (valido) {
+        irAFase(2);
+      }
+    }
+
+    function cambioModalidad() {
+      const mod = document.querySelector('input[name="modalidad"]:checked')?.value;
+      const panel = document.getElementById('panelEspecialidadTecnica');
+      document.getElementById('errModalidad').classList.add('hidden');
+
+      if (mod === 'Bachillerato Técnico Vocacional') {
+        panel.classList.remove('hidden');
+      } else {
+        panel.classList.add('hidden');
+      }
+    }
+
+    function validarYIrAFase3() {
+      const mod = document.querySelector('input[name="modalidad"]:checked')?.value;
+      if (!mod) {
+        document.getElementById('errModalidad').classList.remove('hidden');
+        return;
+      }
+      document.getElementById('errModalidad').classList.add('hidden');
+
+      // Cargar datos en el resumen de confirmación
+      document.getElementById('resumenNombre').textContent = document.getElementById('nombreCompleto').value.trim();
+      document.getElementById('resumenSeccion').textContent = document.getElementById('seccion').value;
+      document.getElementById('resumenTelefono').textContent = document.getElementById('telefono').value.trim();
+
+      const badgeModalidad = document.getElementById('resumenBadgeModalidad');
+      const resumenModalidad = document.getElementById('resumenModalidadCompleta');
+      const detalleLab = document.getElementById('resumenDetalleLaboratorio');
+
+      if (mod === 'Bachillerato Técnico Vocacional') {
+        badgeModalidad.className = "px-2.5 py-1 rounded-full text-[11px] font-bold bg-emerald-500/20 text-apple-green";
+        badgeModalidad.textContent = "3 Años • Técnico";
+        resumenModalidad.textContent = "Bachillerato Técnico Vocacional en Diseño Gráfico";
+        detalleLab.textContent = "Laboratorio con computadoras Apple iMac • 8 módulos de diseño por año.";
+      } else {
+        badgeModalidad.className = "px-2.5 py-1 rounded-full text-[11px] font-bold bg-blue-500/20 text-apple-blue";
+        badgeModalidad.textContent = "2 Años • General";
+        resumenModalidad.textContent = "Bachillerato General (Humanístico-Científico)";
+        detalleLab.textContent = "Preparación académica enfocada directamente al ingreso a estudios superiores.";
+      }
+
+      irAFase(3);
+    }
+
+    function irAFase(numero) {
+      // Ocultar todas las fases
+      document.getElementById('fase1').classList.add('hidden');
+      document.getElementById('fase2').classList.add('hidden');
+      document.getElementById('fase3').classList.add('hidden');
+
+      // Resetear estilos visuales del Stepper
+      const circles = [
+        document.getElementById('step-circle-1'),
+        document.getElementById('step-circle-2'),
+        document.getElementById('step-circle-3')
+      ];
+      const navs = [
+        document.getElementById('step-nav-1'),
+        document.getElementById('step-nav-2'),
+        document.getElementById('step-nav-3')
+      ];
+
+      circles.forEach((c, idx) => {
+        if (idx + 1 === numero) {
+          c.className = "w-8 h-8 rounded-full bg-apple-blue text-white text-xs font-bold flex items-center justify-center shadow-apple-glow transition";
+          navs[idx].classList.remove('opacity-40');
+        } else if (idx + 1 < numero) {
+          c.className = "w-8 h-8 rounded-full bg-apple-green text-black text-xs font-bold flex items-center justify-center transition";
+          navs[idx].classList.remove('opacity-40');
+        } else {
+          c.className = "w-8 h-8 rounded-full bg-white/[0.1] text-apple-grayText text-xs font-bold flex items-center justify-center transition";
+          navs[idx].classList.add('opacity-40');
+        }
+      });
+
+      // Mostrar fase seleccionada
+      document.getElementById(`fase${numero}`).classList.remove('hidden');
+    }
+
+    function cambiarAnioCurricular(anio) {
+      document.getElementById('panelAnio1').classList.add('hidden');
+      document.getElementById('panelAnio2').classList.add('hidden');
+      document.getElementById('panelAnio3').classList.add('hidden');
+
+      const btns = [
+        document.getElementById('btnAnio1'),
+        document.getElementById('btnAnio2'),
+        document.getElementById('btnAnio3')
+      ];
+
+      btns.forEach((b, idx) => {
+        if (idx + 1 === anio) {
+          b.className = "px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 bg-white text-black shadow-md";
+        } else {
+          b.className = "px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 text-apple-grayText hover:text-white";
+        }
+      });
+
+      document.getElementById(`panelAnio${anio}`).classList.remove('hidden');
+    }
+  </script>
+
+</body>
+
+</html>
